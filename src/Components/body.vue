@@ -96,14 +96,14 @@
                 <div class="flex gap-6 mt-4">
                     <!-- Projects -->
                     <div
-                        class="flex-1 bg-white bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
+                        class="flex-1 bg-black bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
                         <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">12+</h3>
                         <p class="text-white text-sm md:text-base mt-1">Projects Completed</p>
                     </div>
 
                     <!-- Experience -->
                     <div
-                        class="flex-1 bg-white bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
+                        class="flex-1 bg-black bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
                         <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">4+</h3>
                         <p class="text-white text-sm md:text-base mt-1">Years Experience</p>
                     </div>
@@ -119,7 +119,7 @@
             </div>
 
             <!-- Right -->
-            <div id="skills-container"
+            <div ref="skillsContainer" id="skills-container"
                 class="relative w-[700px] h-[300px] bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden rounded-xl">
 
                 <!-- Frontend / Web Basics -->
@@ -251,7 +251,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
                         Frontend Architecture
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed">
                         Crafting responsive and modern frontend interfaces using Vue.js, Tailwind CSS, Bootstrap,
                         JavaScript, HTML, and CSS with clean layouts and user-friendly design.
                     </p>
@@ -270,7 +270,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
                         Product Design
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed">
                         Creating user-centric product designs and wireframes that enhance accessibility, usability, and
                         user engagement across web and mobile applications.
                     </p>
@@ -289,7 +289,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-rose-600 transition-colors">
                         Mobile Experience
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed">
                         Designing modern and user-friendly mobile application UI/UX in Figma with responsive layouts,
                         reusable components, and complete application flow planning.
                     </p>
@@ -308,7 +308,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors">
                         Full-stack Dev
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed">
                         Experienced in frontend and full-stack web development with expertise in Vue.js, HTML, Tailwind
                         CSS, JavaScript, PHP, Figma UI design, and database management using cPanel and phpMyAdmin.
                     </p>
@@ -320,7 +320,7 @@
     <!-- CONTACT -->
     <section id="contact" class="py-28 px-6 relative">
         <!-- Random Bubbles -->
-        <div id="bubbles"></div>
+        <div ref="bubbleContainer" id="bubbles"></div>
 
         <div class="text-center mb-20 relative z-10">
             <h2
@@ -357,29 +357,51 @@
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount } from "vue";
+import { ref, nextTick, onMounted, onUpdated, onBeforeUnmount } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-let animationFrameId = null;
-const cleanupFunctions = [];
+const bubbleContainer = ref(null);
+const skillsContainer = ref(null);
 
-onMounted(() => {
+let animationFrameId = null;
+let cleanupFunctions = [];
+
+function cleanupOldJs() {
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+    }
+
+    cleanupFunctions.forEach((cleanup) => cleanup());
+    cleanupFunctions = [];
+
+    if (bubbleContainer.value) {
+        bubbleContainer.value.innerHTML = "";
+    }
+}
+
+async function initBodyJs() {
+    await nextTick();
+
+    cleanupOldJs();
+
     AOS.init({
         duration: 1000,
         once: true,
     });
 
-    const bubbleContainer = document.getElementById("bubbles");
+    AOS.refresh();
 
-    if (bubbleContainer) {
-        bubbleContainer.innerHTML = "";
+    const bubbleBox = bubbleContainer.value;
 
+    if (bubbleBox) {
         for (let i = 0; i < 25; i++) {
             const bubble = document.createElement("div");
             bubble.classList.add("bubble");
 
             const size = Math.random() * 80 + 20;
+
             bubble.style.width = size + "px";
             bubble.style.height = size + "px";
             bubble.style.left = Math.random() * 100 + "vw";
@@ -387,11 +409,11 @@ onMounted(() => {
             bubble.style.background =
                 "radial-gradient(circle, rgba(99,102,241,0.6), transparent)";
 
-            bubbleContainer.appendChild(bubble);
+            bubbleBox.appendChild(bubble);
         }
     }
 
-    const container = document.getElementById("skills-container");
+    const container = skillsContainer.value;
 
     if (!container) return;
 
@@ -544,14 +566,18 @@ onMounted(() => {
     }
 
     animate();
+}
+
+onMounted(() => {
+    initBodyJs();
+});
+
+onUpdated(() => {
+    initBodyJs();
 });
 
 onBeforeUnmount(() => {
-    if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-    }
-
-    cleanupFunctions.forEach((cleanup) => cleanup());
+    cleanupOldJs();
 });
 </script>
 

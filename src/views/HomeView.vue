@@ -5,8 +5,10 @@ import Body from '@/Components/body.vue'
 </script>
 
 <template>
+
+    <Body />
     <HeroSection />
     <FeaturedProjects />
 
-    <Body />
+
 </template>
