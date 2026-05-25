@@ -1,7 +1,6 @@
 <template>
     <!-- HERO -->
-    <section id="home"
-        class="relative overflow-hidden bg-gradient-to-br from-blue-700 via-[#0d5c8a] to-emerald-900 py-20">
+    <section id="home" class="relative overflow-hidden bg-gradient-to-br from-black via-[#0d5c8a] to-black py-20">
 
         <!-- background pattern -->
         <div class="absolute inset-0 opacity-10"
@@ -9,51 +8,11 @@
         </div>
 
         <!-- blur circles -->
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-green-500 rounded-full blur-[100px] opacity-40">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-purple-900 rounded-full blur-[100px] opacity-00">
         </div>
-        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-600 rounded-full blur-[100px] opacity-60">
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-900 rounded-full blur-[100px] opacity-80">
         </div>
 
-        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 gap-8">
-            <!-- LEFT CONTENT -->
-            <div class="flex-1 text-center md:text-left">
-                <h1 class="text-2xl md:text-3xl lg:text-6xl font-black leading-tight mb-6 text-white">
-                    <span
-                        class="bg-gradient-to-r from-orange-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                        Creative
-                    </span>
-                    <br>
-                    <span class="text-white">
-                        Frontend Developer
-                    </span>
-                    <span
-                        class="bg-gradient-to-r from-sky-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                        & UI/UX Designer
-                    </span>
-                </h1>
-                <p class="text-blue-100 mb-6">
-                    I craft beautiful, user-centered digital experiences that bridge the gap between design and
-                    functionality.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="mywork.html">
-                        <button
-                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition">
-                            View My Work
-                        </button>
-                    </a>
-                    <button
-                        class="border border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-6 py-3 rounded-lg transition">
-                        Download CV
-                    </button>
-                </div>
-            </div>
-
-            <!-- RIGHT IMAGE -->
-            <div class="flex-1">
-                <img src="https://via.placeholder.com/280" class="rounded-xl mx-auto md:mx-0 shadow-xl">
-            </div>
-        </div>
 
         <!-- WAVE -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
@@ -230,8 +189,7 @@
                         My Expertise
                     </span>
                 </h2>
-                <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up"
-                    data-aos-delay="100">
+                <p class="text-white text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
                     I bridge the gap between complex problems and intuitive digital solutions. Specialized in
                     high-performance web experiences.
                 </p>
@@ -623,7 +581,7 @@ onBeforeUnmount(() => {
 }
 
 .animated-bg-shift {
-    background: linear-gradient(-45deg, #064547, #863bc4, #150d3f, #4d2068);
+    background: linear-gradient(-45deg, #064547, #673491, #150d3f, #4d2068);
     background-size: 400% 400%;
     animation: bgGradientShift 15s ease infinite;
 }
