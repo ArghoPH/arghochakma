@@ -1,0 +1,675 @@
+<template>
+    <!-- HERO -->
+    <section id="home"
+        class="relative overflow-hidden bg-gradient-to-br from-blue-700 via-[#0d5c8a] to-emerald-900 py-20">
+
+        <!-- background pattern -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+        </div>
+
+        <!-- blur circles -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-green-500 rounded-full blur-[100px] opacity-40">
+        </div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-600 rounded-full blur-[100px] opacity-60">
+        </div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 gap-8">
+            <!-- LEFT CONTENT -->
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-2xl md:text-3xl lg:text-6xl font-black leading-tight mb-6 text-white">
+                    <span
+                        class="bg-gradient-to-r from-orange-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                        Creative
+                    </span>
+                    <br>
+                    <span class="text-white">
+                        Frontend Developer
+                    </span>
+                    <span
+                        class="bg-gradient-to-r from-sky-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                        & UI/UX Designer
+                    </span>
+                </h1>
+                <p class="text-blue-100 mb-6">
+                    I craft beautiful, user-centered digital experiences that bridge the gap between design and
+                    functionality.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="mywork.html">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition">
+                            View My Work
+                        </button>
+                    </a>
+                    <button
+                        class="border border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-6 py-3 rounded-lg transition">
+                        Download CV
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="flex-1">
+                <img src="https://via.placeholder.com/280" class="rounded-xl mx-auto md:mx-0 shadow-xl">
+            </div>
+        </div>
+
+        <!-- WAVE -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[80px]" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,121.22,190.61,109.52Z"
+                    class="fill-slate-50">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <span
+                class="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-900 animate-text-flow font-extrabold text-4xl md:text-5xl tracking-tight">
+                About Me
+            </span>
+            <p class="bg-gradient-to-r from-sky-900 via-blue-400 to-purple-700 animate-text-flow font-bold mt-3">
+                Passionate about creating digital experiences that make a difference
+            </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-12">
+            <!-- Left Section - Modern Styled -->
+            <div
+                class="flex-1 space-y-6 p-6 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white rounded-2xl shadow-2xl">
+
+                <!-- Intro -->
+                <p class="text-lg md:text-xl font-medium tracking-wide">
+                    With over <span class="font-bold text-yellow-400">4 year</span> of experience in
+                    <span class="font-bold decoration-yellow-300 text-yellow-400">Frontend Development</span>
+                    and
+                    <span class="font-bold text-yellow-300">UI/UX design</span>.
+                </p>
+
+                <!-- Stats -->
+                <div class="flex gap-6 mt-4">
+                    <!-- Projects -->
+                    <div
+                        class="flex-1 bg-white bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">12+</h3>
+                        <p class="text-white text-sm md:text-base mt-1">Projects Completed</p>
+                    </div>
+
+                    <!-- Experience -->
+                    <div
+                        class="flex-1 bg-white bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">4+</h3>
+                        <p class="text-white text-sm md:text-base mt-1">Years Experience</p>
+                    </div>
+                </div>
+
+                <!-- Right Arrow -->
+                <div class="mt-4 animate-slide-x flex justify-start items-center gap-2">
+                    <div
+                        class="bg-yellow-300 text-gray-900 px-4 py-2 rounded-full cursor-pointer select-none font-bold">
+                        <p class="text-gray-700">The Skills ❖</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div id="skills-container"
+                class="relative w-[700px] h-[300px] bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden rounded-xl">
+
+                <!-- Frontend / Web Basics -->
+                <div
+                    class="skill absolute bg-gradient-to-r from-indigo-700 to-indigo-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Frontend
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-yellow-700 to-yellow-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    JavaScript (ES6+)
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-red-500 to-yellow-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    ASP.Net
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-red-700 to-blue-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Vue3.js
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-orange-600 to-orange-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    HTML5
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-cyan-700 to-cyan-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    CSS3
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-pink-700 to-pink-700 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Tailwind CSS
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Website Design
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-yellow-600 to-red-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    CodeIgnator
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-purple-500 to-purple-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    BootStrap
+                </div>
+
+                <!-- Backend / Server -->
+                <div
+                    class="skill absolute bg-gradient-to-r from-yellow-400 to-yellow-700 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    PHP
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-blue-700 to-blue-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    MySQL
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-emerald-700 to-emerald-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    REST API
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-teal-500 to-teal-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    REST API Integration
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-orange-600 to-purple-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Web Development
+                </div>
+
+                <!-- Design / UI/UX -->
+                <div
+                    class="skill absolute bg-gradient-to-r from-rose-700 to-rose-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    UI/UX
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-fuchsia-700 to-fuchsia-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Figma
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-purple-600 to-purple-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    UI/UX Design
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-fuchsia-600 to-indigo-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    User Flow & Wireframe
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-rose-500 to-fuchsia-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Git
+                </div>
+                <div
+                    class="skill absolute bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                    Responsive Design
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-32 px-6 relative overflow-hidden animated-bg-shift">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-10 left-10 w-96 h-96 bg-purple-900 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-orange-900 rounded-full blur-[120px] animate-pulse">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-extrabold mb-6 tracking-tight text-gray-900" data-aos="fade-up">
+                    <span class="bg-gradient-to-r from-orange-600 via-purple-600 to-indigo-600 animate-text-flow">
+                        My Expertise
+                    </span>
+                </h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up"
+                    data-aos-delay="100">
+                    I bridge the gap between complex problems and intuitive digital solutions. Specialized in
+                    high-performance web experiences.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                        Frontend Architecture
+                    </h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Crafting responsive and modern frontend interfaces using Vue.js, Tailwind CSS, Bootstrap,
+                        JavaScript, HTML, and CSS with clean layouts and user-friendly design.
+                    </p>
+                </div>
+
+                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
+                        Product Design
+                    </h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Creating user-centric product designs and wireframes that enhance accessibility, usability, and
+                        user engagement across web and mobile applications.
+                    </p>
+                </div>
+
+                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-rose-600 transition-colors">
+                        Mobile Experience
+                    </h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Designing modern and user-friendly mobile application UI/UX in Figma with responsive layouts,
+                        reusable components, and complete application flow planning.
+                    </p>
+                </div>
+
+                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors">
+                        Full-stack Dev
+                    </h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Experienced in frontend and full-stack web development with expertise in Vue.js, HTML, Tailwind
+                        CSS, JavaScript, PHP, Figma UI design, and database management using cPanel and phpMyAdmin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-28 px-6 relative">
+        <!-- Random Bubbles -->
+        <div id="bubbles"></div>
+
+        <div class="text-center mb-20 relative z-10">
+            <h2
+                class="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">
+                Let's Work Together
+            </h2>
+            <p class="text-gray-300 text-lg">Ready to build something powerful and impactful?</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 relative z-10 glass-card p-14 rounded-3xl shadow-2xl">
+            <!-- Info -->
+            <div class="space-y-8 text-gray-300 text-lg">
+                <p>
+                    <span class="font-semibold text-indigo-400" data-copy="arghochakma2023@gmail.com">Email:</span>
+                    ar@gmail.com
+                </p>
+                <p><span class="font-semibold text-purple-400">Phone:</span> 00000000</p>
+                <p><span class="font-semibold text-cyan-400">Location:</span> Dhaka, Bangladesh</p>
+            </div>
+
+            <!-- Form -->
+            <div class="flex flex-col gap-6">
+                <input type="text" placeholder="Your Name" class="rounded-xl px-5 py-3 focus:outline-none">
+                <input type="email" placeholder="Your Email" class="rounded-xl px-5 py-3 focus:outline-none">
+                <input type="text" placeholder="Subject" class="rounded-xl px-5 py-3 focus:outline-none">
+                <textarea rows="4" placeholder="Your Message"
+                    class="rounded-xl px-5 py-3 focus:outline-none"></textarea>
+                <button class="btn-neon text-white font-semibold px-6 py-4 rounded-xl">
+                    Send Message 🚀
+                </button>
+            </div>
+        </div>
+    </section>
+</template>
+
+<script setup>
+import { onMounted, onBeforeUnmount } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+let animationFrameId = null;
+const cleanupFunctions = [];
+
+onMounted(() => {
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+
+    const bubbleContainer = document.getElementById("bubbles");
+
+    if (bubbleContainer) {
+        bubbleContainer.innerHTML = "";
+
+        for (let i = 0; i < 25; i++) {
+            const bubble = document.createElement("div");
+            bubble.classList.add("bubble");
+
+            const size = Math.random() * 80 + 20;
+            bubble.style.width = size + "px";
+            bubble.style.height = size + "px";
+            bubble.style.left = Math.random() * 100 + "vw";
+            bubble.style.animationDuration = Math.random() * 10 + 10 + "s";
+            bubble.style.background =
+                "radial-gradient(circle, rgba(99,102,241,0.6), transparent)";
+
+            bubbleContainer.appendChild(bubble);
+        }
+    }
+
+    const container = document.getElementById("skills-container");
+
+    if (!container) return;
+
+    const skills = Array.from(container.querySelectorAll(".skill"));
+
+    if (skills.length === 0) return;
+
+    skills.forEach((skill) => {
+        const rect = skill.getBoundingClientRect();
+
+        skill.skillWidth = rect.width;
+        skill.skillHeight = rect.height;
+
+        skill.x = Math.random() * Math.max(0, container.clientWidth - skill.skillWidth);
+        skill.y = Math.random() * Math.max(0, container.clientHeight - skill.skillHeight);
+
+        skill.vx = (Math.random() - 0.5) * 0.3;
+        skill.vy = (Math.random() - 0.5) * 0.3;
+
+        skill.isDragging = false;
+        skill.style.transform = `translate(${skill.x}px, ${skill.y}px)`;
+    });
+
+    skills.forEach((skill) => {
+        let offsetX = 0;
+        let offsetY = 0;
+
+        const startDrag = (clientX, clientY) => {
+            skill.isDragging = true;
+            offsetX = clientX - skill.x;
+            offsetY = clientY - skill.y;
+        };
+
+        const dragMove = (clientX, clientY) => {
+            if (!skill.isDragging) return;
+
+            skill.x = clientX - offsetX;
+            skill.y = clientY - offsetY;
+
+            skill.x = Math.max(
+                0,
+                Math.min(container.clientWidth - skill.skillWidth, skill.x)
+            );
+
+            skill.y = Math.max(
+                0,
+                Math.min(container.clientHeight - skill.skillHeight, skill.y)
+            );
+        };
+
+        const endDrag = () => {
+            skill.isDragging = false;
+        };
+
+        const mouseDownHandler = (event) => {
+            startDrag(event.clientX, event.clientY);
+        };
+
+        const mouseMoveHandler = (event) => {
+            dragMove(event.clientX, event.clientY);
+        };
+
+        const touchStartHandler = (event) => {
+            const touch = event.touches[0];
+            if (!touch) return;
+
+            startDrag(touch.clientX, touch.clientY);
+        };
+
+        const touchMoveHandler = (event) => {
+            const touch = event.touches[0];
+            if (!touch) return;
+
+            dragMove(touch.clientX, touch.clientY);
+        };
+
+        skill.addEventListener("mousedown", mouseDownHandler);
+        document.addEventListener("mousemove", mouseMoveHandler);
+        document.addEventListener("mouseup", endDrag);
+
+        skill.addEventListener("touchstart", touchStartHandler);
+        document.addEventListener("touchmove", touchMoveHandler, { passive: false });
+        document.addEventListener("touchend", endDrag);
+
+        cleanupFunctions.push(() => {
+            skill.removeEventListener("mousedown", mouseDownHandler);
+            document.removeEventListener("mousemove", mouseMoveHandler);
+            document.removeEventListener("mouseup", endDrag);
+
+            skill.removeEventListener("touchstart", touchStartHandler);
+            document.removeEventListener("touchmove", touchMoveHandler);
+            document.removeEventListener("touchend", endDrag);
+        });
+    });
+
+    function preventOverlap(skill) {
+        skills.forEach((other) => {
+            if (skill === other) return;
+
+            const dx = skill.x - other.x;
+            const dy = skill.y - other.y;
+
+            const minDistX = (skill.skillWidth + other.skillWidth) / 2;
+            const minDistY = (skill.skillHeight + other.skillHeight) / 2;
+
+            if (Math.abs(dx) < minDistX && Math.abs(dy) < minDistY) {
+                if (dx !== 0) skill.x += dx > 0 ? 1 : -1;
+                if (dy !== 0) skill.y += dy > 0 ? 1 : -1;
+            }
+        });
+    }
+
+    function animate() {
+        skills.forEach((skill) => {
+            if (!skill.isDragging) {
+                skill.x += skill.vx;
+                skill.y += skill.vy;
+
+                if (
+                    skill.x < 0 ||
+                    skill.x > container.clientWidth - skill.skillWidth
+                ) {
+                    skill.vx *= -1;
+                }
+
+                if (
+                    skill.y < 0 ||
+                    skill.y > container.clientHeight - skill.skillHeight
+                ) {
+                    skill.vy *= -1;
+                }
+
+                skill.x = Math.max(
+                    0,
+                    Math.min(container.clientWidth - skill.skillWidth, skill.x)
+                );
+
+                skill.y = Math.max(
+                    0,
+                    Math.min(container.clientHeight - skill.skillHeight, skill.y)
+                );
+
+                preventOverlap(skill);
+            }
+
+            skill.style.transform = `translate(${skill.x}px, ${skill.y}px)`;
+        });
+
+        animationFrameId = requestAnimationFrame(animate);
+    }
+
+    animate();
+});
+
+onBeforeUnmount(() => {
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+    }
+
+    cleanupFunctions.forEach((cleanup) => cleanup());
+});
+</script>
+
+<style>
+@keyframes slide-x {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    80% {
+        transform: translateX(290px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-x {
+    animation: slide-x 4s ease-in-out infinite;
+}
+
+.skill {
+    user-select: none;
+    width: max-content;
+    transition: transform 0.2s;
+}
+
+@keyframes bgGradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-bg-shift {
+    background: linear-gradient(-45deg, #064547, #863bc4, #150d3f, #4d2068);
+    background-size: 400% 400%;
+    animation: bgGradientShift 15s ease infinite;
+}
+
+.animate-text-flow {
+    background-size: 200% auto;
+    animation: bgGradientShift 4s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contact {
+    background: radial-gradient(circle at top left, #0f172a, #0b1120 60%);
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -150px;
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: rise linear infinite;
+    backdrop-filter: blur(2px);
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: translateY(-120vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.glass-card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+input,
+textarea {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.7);
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.btn-neon {
+    background: linear-gradient(90deg, #4f46e5, #9333ea);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.6);
+    transition: 0.4s;
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 40px rgba(147, 51, 234, 1);
+    transform: scale(1.05);
+}
+</style>
