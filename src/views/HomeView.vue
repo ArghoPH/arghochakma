@@ -6,8 +6,9 @@ import Body from '@/Components/body.vue'
 
 <template>
 
-    <Body />
     <HeroSection />
+
+    <Body />
     <FeaturedProjects />
 
 

@@ -1,6 +1,6 @@
 <template>
     <section
-        class="relative min-h-[calc(100vh-80px)] overflow-hidden bg-slate-50/50 dark:bg-gray-950 flex items-center transition-colors duration-300">
+        class="relative min-h-[calc(100vh-80px)] overflow-hidden bg-slate-50/50 dark:bg-gray-950 flex items-center transition-colors duration-300 pb-12 md:pb-20">
 
         <!-- Ambient Background Glows (UI/UX Depth Effect) -->
         <div
@@ -10,7 +10,7 @@
             class="absolute -bottom-40 -left-40 -z-10 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-indigo-400/10 to-pink-400/0 blur-3xl dark:from-indigo-600/10 dark:to-transparent">
         </div>
 
-        <div class="mx-auto max-w-6xl w-full px-5 py-12 md:py-20">
+        <div class="mx-auto max-w-6xl w-full px-5 py-12 md:py-20 z-10">
             <div class="flex flex-col-reverse items-center gap-12 lg:gap-16 md:flex-row md:justify-between">
 
                 <!-- Left Content Area -->
@@ -36,7 +36,7 @@
                             class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl dark:text-white">
                             <span
                                 class="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-300 dark:to-purple-400">
-                                Pravakar A.
+                                A.
                             </span>
                         </h1>
                         <h2 class="text-2xl font-bold tracking-tight text-gray-700 sm:text-3xl dark:text-gray-300">
@@ -99,7 +99,7 @@
                         <div
                             class="relative h-full w-full overflow-hidden rounded-3xl border border-gray-200/50 bg-white p-3 shadow-2xl transition-all duration-500 group-hover:-translate-y-2 dark:border-gray-800/50 dark:bg-gray-900">
                             <div class="h-full w-full overflow-hidden rounded-2xl bg-slate-100 dark:bg-gray-800">
-                                <img src="/images/profile.jpg" alt="Pravakar A. - Frontend Developer Profile"
+                                <img src="/images/profile.jpg" alt="A. - Frontend Developer Profile"
                                     class="h-full w-full object-cover scale-100 transition-transform duration-700 ease-out group-hover:scale-105" />
                             </div>
                         </div>
@@ -109,5 +109,6 @@
 
             </div>
         </div>
+
     </section>
 </template>
