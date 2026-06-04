@@ -69,17 +69,17 @@
 
                     <!-- Social Branding Icons -->
                     <div class="flex justify-center gap-6 text-xl pt-4 md:justify-start">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/ArghoPH" target="_blank" rel="noopener noreferrer"
                             aria-label="GitHub Profile"
                             class="text-gray-400 transition-all duration-300 hover:-translate-y-1 hover:text-gray-900 dark:hover:text-white">
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn Profile"
+                        <a href="https://linkedin.com/in/argho-chakma-0442561ba/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn Profile"
                             class="text-gray-400 transition-all duration-300 hover:-translate-y-1 hover:text-blue-600 dark:hover:text-blue-400">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="mailto:your.email@example.com" aria-label="Send Email"
+                        <a href="mailto:arghochakma7@gmail.com" aria-label="Send Email"
                             class="text-gray-400 transition-all duration-300 hover:-translate-y-1 hover:text-red-500 dark:hover:text-red-400">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
