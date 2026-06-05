@@ -16,7 +16,7 @@ function closeMenu() {
 
 <template>
     <header class="sticky top-0 z-50  shadow-sm">
-        <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+        <nav class="mx-auto flex max-w-8xl items-center justify-between px-5 py-4">
             <!-- Logo -->
             <RouterLink to="/" class="text-2xl font-bold text-gray-900 dark:text-white" @click="closeMenu">
                 Argho
@@ -64,8 +64,8 @@ function closeMenu() {
         </nav>
 
         <!-- Mobile Menu -->
-        <div v-if="isMenuOpen" class="border-t bg-white dark:bg-gray-900 md:hidden">
-            <div class="flex flex-col gap-4 px-5 py-5 bg-white dark:bg-gray-900">
+        <div v-if="isMenuOpen" class="border-t  md:hidden">
+            <div class="flex flex-col gap-4 px-5 py-5">
                 <RouterLink to="/" class="mobile-link" @click="closeMenu">Home</RouterLink>
                 <RouterLink to="/projects" class="mobile-link" @click="closeMenu">Projects</RouterLink>
                 <RouterLink to="/about" class="mobile-link" @click="closeMenu">About</RouterLink>
