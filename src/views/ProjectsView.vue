@@ -22,7 +22,7 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-    <main class="bg-white text-gray-900 dark:bg-slate-950 dark:text-slate-100">
+    <main>
         <section class="mx-auto max-w-6xl px-5 py-16">
             <!-- Heading -->
             <div class="mb-10 text-center">
