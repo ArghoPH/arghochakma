@@ -190,7 +190,7 @@ onBeforeUnmount(() => {
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="100">
                     <div
                         class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
@@ -200,16 +200,16 @@ onBeforeUnmount(() => {
                                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">
                         Frontend Architecture
                     </h3>
-                    <p class="text-justify text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                         Crafting responsive and modern frontend interfaces using Vue.js, Tailwind CSS, Bootstrap,
                         JavaScript, HTML, and CSS with clean layouts and user-friendly design.
                     </p>
                 </div>
 
-                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="200">
                     <div
                         class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-sm">
@@ -219,16 +219,16 @@ onBeforeUnmount(() => {
                                 d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition-colors">
                         Product Design
                     </h3>
-                    <p class="text-justify text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                         Creating user-centric product designs and wireframes that enhance accessibility, usability, and
                         user engagement across web and mobile applications.
                     </p>
                 </div>
 
-                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="300">
                     <div
                         class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-all duration-300 shadow-sm">
@@ -238,16 +238,16 @@ onBeforeUnmount(() => {
                                 d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-rose-600 transition-colors">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-rose-600 transition-colors">
                         Mobile Experience
                     </h3>
-                    <p class="text-justify text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                         Designing modern and user-friendly mobile application UI/UX in Figma with responsive layouts,
                         reusable components, and complete application flow planning.
                     </p>
                 </div>
 
-                <div class="group relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/40 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="400">
                     <div
                         class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-sm">
@@ -257,10 +257,10 @@ onBeforeUnmount(() => {
                                 d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 transition-colors">
                         Full-stack Dev
                     </h3>
-                    <p class="text-justify text-sm leading-relaxed">
+                    <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                         Experienced in frontend and full-stack web development with expertise in Vue.js, HTML, Tailwind
                         CSS, JavaScript, PHP, Figma UI design, and database management using cPanel and phpMyAdmin.
                     </p>

@@ -53,6 +53,10 @@ function closeMenu() {
                 </a>
             </div>
 
+            <div class="flex items-center gap-2 md:hidden">
+                <ThemeToggle />
+            </div>
+
             <!-- Mobile Button -->
             <button class="text-2xl md:hidden" @click="toggleMenu">
                 <i :class="isMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
@@ -75,7 +79,6 @@ function closeMenu() {
                     <a href="https://linkedin.com/in/yourusername" target="_blank" class="icon-link">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <ThemeToggle />
                 </div>
             </div>
         </div>

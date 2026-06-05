@@ -22,17 +22,17 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-    <main class="bg-white">
+    <main class="bg-white text-gray-900 dark:bg-slate-950 dark:text-slate-100">
         <section class="mx-auto max-w-6xl px-5 py-16">
             <!-- Heading -->
             <div class="mb-10 text-center">
-                <p class="mb-3 font-semibold text-blue-600">My Work</p>
+                <p class="mb-3 font-semibold text-blue-600 dark:text-blue-400">My Work</p>
 
-                <h1 class="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
+                <h1 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
                     Projects
                 </h1>
 
-                <p class="mx-auto max-w-2xl leading-7 text-gray-600">
+                <p class="mx-auto max-w-2xl leading-7 text-gray-600 dark:text-slate-300">
                     Here are some of the projects I have built using HTML, Tailwind CSS,
                     JavaScript, Vue, and modern frontend tools.
                 </p>
@@ -43,7 +43,7 @@ const filteredProjects = computed(() => {
                 <button v-for="category in categories" :key="category" @click="selectedCategory = category"
                     class="rounded-full border px-5 py-2 font-medium transition" :class="selectedCategory === category
                         ? 'border-blue-600 bg-blue-600 text-white'
-                        : 'border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600'
+                        : 'border-gray-300 bg-white text-gray-700 hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-blue-500 dark:hover:text-blue-300'
                         ">
                     {{ category }}
                 </button>
@@ -55,7 +55,7 @@ const filteredProjects = computed(() => {
             </div>
 
             <!-- Empty Message -->
-            <p v-else class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600">
+            <p v-else class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600 dark:bg-slate-900 dark:text-slate-300">
                 No projects found in this category.
             </p>
         </section>
