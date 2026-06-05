@@ -15,7 +15,7 @@ const featuredProjects = projects.slice(0, 3)
                     Recent Projects
                 </h2>
 
-                <p class="mx-auto max-w-2xl leading-7 text-gray-600 dark:text-slate-300">
+                <p class="mx-auto max-w-2xl leading-7 dark:text-slate-300">
                     Here are some of my recent projects built with HTML, Tailwind CSS,
                     JavaScript, Vue, and modern frontend tools.
                 </p>
