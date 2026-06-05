@@ -45,11 +45,11 @@ function closeMenu() {
 
             <!-- Social Icons Desktop -->
             <div class="hidden items-center gap-4 text-xl md:flex">
-                <a href="https://github.com/yourusername" target="_blank" class="icon-link">
+                <a href="https://github.com/ArghoPH" target="_blank" class="icon-link">
                     <i class="fa-brands fa-github"></i>
                 </a>
 
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="icon-link">
+                <a href="https://linkedin.com/in/argho-chakma-0442561ba/" target="_blank" class="icon-link">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
