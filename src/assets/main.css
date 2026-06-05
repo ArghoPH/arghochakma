@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+}
+
+.dark {
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --muted: #9ca3af;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
 .router-link-active {
   color: #2563eb;
 }
