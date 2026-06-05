@@ -3,7 +3,7 @@ import profileImage from '../images/profile-1.png'
 </script>
 <template>
     <section
-        class="relative min-h-[calc(100vh-80px)] overflow-hidden dark:bg-gray-950 flex items-center transition-colors duration-300 pb-12 md:pb-20">
+        class="relative min-h-[calc(100vh-80px)] overflow-hidden flex items-center transition-colors duration-300 pb-12 md:pb-20">
 
         <!-- Ambient Background Glows (UI/UX Depth Effect) -->
         <div
