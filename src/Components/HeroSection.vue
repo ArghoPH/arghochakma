@@ -1,3 +1,6 @@
+<script setup>
+import profileImage from '../images/profile-1.png'
+</script>
 <template>
     <section
         class="relative min-h-[calc(100vh-80px)] overflow-hidden bg-slate-50/50 dark:bg-gray-950 flex items-center transition-colors duration-300 pb-12 md:pb-20">
@@ -36,7 +39,7 @@
                             class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl dark:text-white">
                             <span
                                 class="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-300 dark:to-purple-400">
-                                A.
+                                Argho Chakma
                             </span>
                         </h1>
                         <h2 class="text-2xl font-bold tracking-tight text-gray-700 sm:text-3xl dark:text-gray-300">
@@ -99,7 +102,7 @@
                         <div
                             class="relative h-full w-full overflow-hidden rounded-3xl border border-gray-200/50 bg-white p-3 shadow-2xl transition-all duration-500 group-hover:-translate-y-2 dark:border-gray-800/50 dark:bg-gray-900">
                             <div class="h-full w-full overflow-hidden rounded-2xl bg-slate-100 dark:bg-gray-800">
-                                <img src="/images/profile.jpg" alt="A. - Frontend Developer Profile"
+                                <img :src="profileImage" alt="Profile"
                                     class="h-full w-full object-cover scale-100 transition-transform duration-700 ease-out group-hover:scale-105" />
                             </div>
                         </div>

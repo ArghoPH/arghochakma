@@ -10,6 +10,10 @@ function toggleMenu() {
 function closeMenu() {
     isMenuOpen.value = false
 }
+
+
+
+
 </script>
 
 <template>
