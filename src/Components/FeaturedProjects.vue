@@ -6,12 +6,12 @@ const featuredProjects = projects.slice(0, 3)
 </script>
 
 <template>
-    <section class="bg-gray-50 dark:bg-slate-950">
+    <section class=" dark:bg-slate-950">
         <div class="mx-auto max-w-6xl px-5 py-16">
             <div class="mb-12 text-center">
                 <p class="mb-3 font-semibold text-blue-600 dark:text-blue-400">Featured Work</p>
 
-                <h2 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+                <h2 class="mb-4 text-3xl font-bold dark:text-white sm:text-4xl">
                     Recent Projects
                 </h2>
 

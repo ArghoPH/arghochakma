@@ -65,7 +65,7 @@ function closeMenu() {
 
         <!-- Mobile Menu -->
         <div v-if="isMenuOpen" class="border-t bg-white dark:bg-gray-900 md:hidden">
-            <div class="flex flex-col gap-4 px-5 py-5">
+            <div class="flex flex-col gap-4 px-5 py-5 bg-white dark:bg-gray-900">
                 <RouterLink to="/" class="mobile-link" @click="closeMenu">Home</RouterLink>
                 <RouterLink to="/projects" class="mobile-link" @click="closeMenu">Projects</RouterLink>
                 <RouterLink to="/about" class="mobile-link" @click="closeMenu">About</RouterLink>
