@@ -73,7 +73,7 @@ onBeforeUnmount(() => {
 
             <!-- Right -->
             <div ref="skillsContainer" id="skills-container"
-                class="relative w-[700px] h-[300px] bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden rounded-xl">
+                class="relative w-full max-w-[700px] h-[300px] bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden rounded-xl">
 
                 <!-- Frontend / Web Basics -->
                 <div
