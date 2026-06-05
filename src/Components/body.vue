@@ -366,7 +366,6 @@ onBeforeUnmount(() => {
 #contact {
     background: radial-gradient(circle at top left, #0f172a, #0b1120 60%);
     position: relative;
-    overflow: hidden;
     color: white;
 }
 

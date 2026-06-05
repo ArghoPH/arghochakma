@@ -117,6 +117,7 @@ export default function bodyScript({ skillsContainer, bubbleContainer }) {
         };
 
         const touchMoveHandler = (event) => {
+            if (!skill.isDragging) return;
             event.preventDefault();
 
             const touch = event.touches[0];
