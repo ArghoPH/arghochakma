@@ -117,7 +117,7 @@ export default function bodyScript({ skillsContainer, bubbleContainer }) {
         };
 
         const touchMoveHandler = (event) => {
-            if (!skill.isDragging) return;
+            if (!skill.isDragging) return; // Only prevent default if dragging to avoid interfering with scrolling
             event.preventDefault();
 
             const touch = event.touches[0];
