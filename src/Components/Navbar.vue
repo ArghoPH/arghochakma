@@ -15,7 +15,7 @@ function closeMenu() {
 </script>
 
 <template>
-    <header class="sticky top-0 z-50  shadow-sm">
+    <header class="sticky top-0 z-50  shadow-sm bg-white dark:bg-slate-950">
         <nav class="mx-auto flex max-w-8xl items-center justify-between px-5 py-4">
             <!-- Logo -->
             <RouterLink to="/" class="text-2xl font-bold text-gray-900 dark:text-white" @click="closeMenu">
