@@ -1,20 +1,18 @@
 <script setup>
-import { ref, watch, onMounted } from 'vue'
+import { ref, watch } from 'vue'
 import { toggleTheme, getInitialTheme, applyTheme } from '@/utils/theme.js'
 
+// `main.js` applies the initial theme before mount; keep local state in sync
 const current = ref(getInitialTheme())
-
-onMounted(() => {
-  applyTheme(current.value)
-})
 
 function handleToggle() {
   current.value = toggleTheme()
 }
 
+// Apply theme only when user toggles (avoid double-applying on mount)
 watch(current, (newTheme) => {
   applyTheme(newTheme)
-}, { immediate: true })
+})
 </script>
 
 <template>

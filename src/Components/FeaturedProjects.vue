@@ -6,7 +6,7 @@ const featuredProjects = projects.slice(0, 3)
 </script>
 
 <template>
-    <section class=" dark:bg-slate-950">
+    <section class="">
         <div class="mx-auto max-w-6xl px-5 py-16">
             <div class="mb-12 text-center">
                 <p class="mb-3 font-semibold text-blue-600 dark:text-blue-400">Featured Work</p>
