@@ -13,7 +13,7 @@ import profileImage from '../images/profile-1.png'
             class="absolute -bottom-40 -left-40 -z-10 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-indigo-400/10 to-pink-400/0 blur-3xl dark:from-indigo-600/10 dark:to-transparent">
         </div>
 
-        <div class="mx-auto max-w-8xl w-full px-5 py-12 md:py-20 z-10">
+        <div class="mx-auto max-w-8xl w-full p-25 md:py-20 z-10">
             <div class="flex flex-col-reverse items-center gap-12 lg:gap-16 md:flex-row md:justify-between">
 
                 <!-- Left Content Area -->
