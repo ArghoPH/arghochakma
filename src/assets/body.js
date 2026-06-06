@@ -29,6 +29,9 @@ export default function bodyScript({ skillsContainer, bubbleContainer }) {
     AOS.refresh();
 
     if (bubbleContainer) {
+        const containerWidth = bubbleContainer.clientWidth;
+        const containerHeight = bubbleContainer.clientHeight;
+
         for (let i = 0; i < 25; i++) {
             const bubble = document.createElement("div");
             bubble.classList.add("bubble");
@@ -37,7 +40,8 @@ export default function bodyScript({ skillsContainer, bubbleContainer }) {
 
             bubble.style.width = size + "px";
             bubble.style.height = size + "px";
-            bubble.style.left = Math.random() * 100 + "vw";
+            bubble.style.left = Math.random() * Math.max(0, containerWidth - size) + "px";
+            bubble.style.top = Math.random() * Math.max(0, containerHeight - size) + "px";
             bubble.style.animationDuration = Math.random() * 10 + 10 + "s";
             bubble.style.background =
                 "radial-gradient(circle, rgba(99,102,241,0.6), transparent)";

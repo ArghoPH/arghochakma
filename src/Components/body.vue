@@ -270,7 +270,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-28 px-6 relative">
+    <section id="contact" class="py-28 px-6 relative overflow-hidden">
         <!-- Random Bubbles -->
         <div ref="bubbleContainer" id="bubbles"></div>
 
@@ -317,7 +317,7 @@ onBeforeUnmount(() => {
     }
 
     80% {
-        transform: translateX(290px);
+        transform: translateX(120px);
     }
 
     100% {
@@ -367,11 +367,18 @@ onBeforeUnmount(() => {
     background: radial-gradient(circle at top left, #0f172a, #0b1120 60%);
     position: relative;
     color: white;
+    overflow: hidden;
+}
+
+#bubbles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .bubble {
     position: absolute;
-    bottom: -150px;
     border-radius: 50%;
     opacity: 0.15;
     animation: rise linear infinite;
