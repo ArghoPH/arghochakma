@@ -36,8 +36,10 @@ function toggleTheme() {
 <template>
     <header class="sticky top-0 z-50 shadow-sm">
         <nav
-            class="mx-auto flex items-center justify-between px-5 py-4 bg-white dark:bg-gray-950 transition-colors duration-300">
-
+    class="mx-auto flex items-center justify-between px-5 py-4
+           bg-white/90 dark:bg-gray-950/90
+           backdrop-blur
+           transition-colors duration-300">
             <!-- Logo -->
             <RouterLink to="/" class="text-2xl font-bold text-black dark:text-white" @click="closeMenu">
                 Argho
@@ -47,9 +49,18 @@ function toggleTheme() {
             <div class="hidden items-center gap-6 md:flex">
 
                 <!-- Theme Toggle -->
-                <button @click="toggleTheme" class="text-xl text-gray-700 dark:text-gray-200">
-                    <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
-                </button>
+                <button
+    @click="toggleTheme"
+    class="flex h-10 w-10 items-center justify-center rounded-full
+           text-gray-700 dark:text-gray-200
+           hover:bg-gray-100 dark:hover:bg-gray-800
+           transition-all duration-300"
+>
+    <i
+        :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"
+        class="text-lg"
+    ></i>
+</button>
 
                 <RouterLink to="/"
                     class="font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
@@ -99,9 +110,18 @@ function toggleTheme() {
             <div class="flex flex-col gap-4 px-5 py-5">
 
                 <!-- Theme Toggle -->
-                <button @click="toggleTheme" class="w-fit text-xl text-gray-700 dark:text-gray-200">
-                    <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
-                </button>
+                <button
+    @click="toggleTheme"
+    class="flex h-10 w-10 items-center justify-center rounded-full
+           text-gray-700 dark:text-gray-200
+           hover:bg-gray-100 dark:hover:bg-gray-800
+           transition-all duration-300"
+>
+    <i
+        :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"
+        class="text-lg"
+    ></i>
+</button>
 
                 <RouterLink to="/"
                     class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
