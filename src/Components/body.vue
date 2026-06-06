@@ -19,7 +19,6 @@ onBeforeUnmount(() => {
 })
 </script>
 <template>
-
     <!-- ABOUT -->
     <section id="about" class="container mx-auto px-4 sm:px-6 py-16">
         <div class="text-center mb-12">
