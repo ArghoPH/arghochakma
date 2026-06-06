@@ -32,13 +32,13 @@ import profileImage from '../images/profile-1.png'
 
                     <!-- Main Typography with Text Gradient -->
                     <div class="space-y-3">
-                        <p class="text-lg font-medium tracking-wide text-gray-500 dark:text-gray-400">
+                        <p class="text-lg font-medium tracking-wide text-gray-500 dark:text-gray-400 text-center">
                             Hi, my name is
                         </p>
                         <h1
                             class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl dark:text-white">
                             <span
-                                class="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-300 dark:to-purple-400">
+                                class="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
                                 Argho Chakma
                             </span>
                         </h1>
