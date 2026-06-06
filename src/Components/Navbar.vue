@@ -36,10 +36,10 @@ function toggleTheme() {
 <template>
     <header class="sticky top-0 z-50 shadow-sm">
         <nav
-    class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4
+    class="mx-auto flex max-w items-center justify-between px-5 py-4
            bg-white/90 dark:bg-gray-950/90
            backdrop-blur
-           transition-colors duration-300">
+           transition-colors duration-300">  
             <!-- Logo -->
             <RouterLink to="/" class="text-2xl font-bold text-black dark:text-white" @click="closeMenu">
                 Argho
