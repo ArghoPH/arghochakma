@@ -2,14 +2,14 @@
 import profileImage from '../images/profile-1.png'
 </script>
 <template>
-<section class="relative min-h-[calc(100vh-80px)] flex items-center py-8 md:py-16 lg:py-20 overflow-hidden dark:bg-gray-950 transition-colors duration-300">
+<section class="relative min-h-[calc(100vh-80px)]  flex items-center py-8 md:py-16 lg:py-20 overflow-hidden dark:bg-gray-950 transition-colors duration-300">
     
     <div class="absolute -top-40 -right-40 -z-10 h-[400px] w-[400px] md:h-[600px] md:w-[600px] rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/0 blur-3xl dark:from-blue-600/10 dark:to-transparent">
     </div>
     <div class="absolute -bottom-40 -left-40 -z-10 h-[400px] w-[400px] md:h-[600px] md:w-[600px] rounded-full bg-gradient-to-tr from-indigo-400/10 to-pink-400/0 blur-3xl dark:from-indigo-600/10 dark:to-transparent">
     </div>
 
-    <div class="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 z-10">
+    <div class="mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 z-10">
         <div class="flex flex-col-reverse items-center gap-10 md:flex-row md:justify-between md:gap-12 lg:gap-16">
 
             <div class="w-full text-center md:w-1/2 md:text-left space-y-6">

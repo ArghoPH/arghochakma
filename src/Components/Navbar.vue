@@ -36,7 +36,7 @@ function toggleTheme() {
 <template>
     <header class="sticky top-0 z-50 shadow-sm">
         <nav
-    class="mx-auto flex items-center justify-between px-5 py-4
+    class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4
            bg-white/90 dark:bg-gray-950/90
            backdrop-blur
            transition-colors duration-300">
