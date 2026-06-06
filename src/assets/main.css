@@ -17,6 +17,11 @@ body {
   color: var(--text);
 }
 
+/* Make paragraph and list text justified across the site */
+p, li {
+  text-align: justify;
+}
+
 .router-link-active {
   color: #2563eb;
 }

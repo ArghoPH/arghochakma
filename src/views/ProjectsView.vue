@@ -23,7 +23,7 @@ const filteredProjects = computed(() => {
 
 <template>
     <main>
-        <section class="mx-auto max-w-6xl px-5 py-16">
+        <section class="container mx-auto px-4 sm:px-6 py-16">
             <!-- Heading -->
             <div class="mb-10 text-center">
                 <p class="mb-3 font-semibold text-blue-600 dark:text-blue-400">My Work</p>

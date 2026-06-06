@@ -21,7 +21,7 @@ onBeforeUnmount(() => {
 <template>
 
     <!-- ABOUT -->
-    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+    <section id="about" class="container mx-auto px-4 sm:px-6 py-16">
         <div class="text-center mb-12">
             <span
                 class="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-900 animate-text-flow font-extrabold text-4xl md:text-5xl tracking-tight">
@@ -73,7 +73,7 @@ onBeforeUnmount(() => {
 
             <!-- Right -->
             <div ref="skillsContainer" id="skills-container"
-                class="relative w-full max-w-[700px] h-[300px] bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden rounded-xl">
+                class="relative w-full max-w-[700px] h-[220px] md:h-[300px] bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden rounded-xl">
 
                 <!-- Frontend / Web Basics -->
                 <div
