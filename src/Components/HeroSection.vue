@@ -21,7 +21,7 @@ import profileImage from '../images/profile-1.png'
 
                     <!-- Premium Interactive Status Badge -->
                     <div
-                        class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50/50 px-4 py-1.5 text-xs font-semibold tracking-wide text-blue-700 backdrop-blur-sm dark:border-blue-900/30 dark:bg-blue-950/40 dark:text-blue-400">
+                        class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50/50 px-4 py-1.5 text-xs font-semibold tracking-wide text-blue-700 backdrop-blur-sm dark:border-blue-900/30 dark:bg-blue-950/40">
                         <span class="flex h-2 w-2 relative">
                             <span
                                 class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
