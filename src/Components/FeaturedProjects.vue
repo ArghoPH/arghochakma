@@ -7,7 +7,7 @@ const featuredProjects = projects.slice(0, 3)
 
 <template>
     <section class="">
-        <div class="container mx-auto px-4 sm:px-6 py-16">
+        <div class="container mx-auto px-4 sm:px-6 py-16 dark:bg-gray-950">
             <div class="mb-12 text-center">
                 <p class="mb-3 font-semibold text-blue-600 dark:text-blue-400">Featured Work</p>
 

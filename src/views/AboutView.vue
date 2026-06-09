@@ -1,15 +1,15 @@
 <template>
     <main class="bg-white">
-        <section class="container mx-auto px-4 sm:px-6 py-16">
+        <section class="container mx-auto px-4 sm:px-6 py-16 dark:bg-gray-950">
             <!-- Heading -->
             <div class="mb-12 text-center">
                 <p class="mb-3 font-semibold text-blue-600">About Me</p>
 
-                <h1 class="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
+                <h1 class="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl dark:text-white">
                     Who I Am
                 </h1>
 
-                <p class="mx-auto max-w-2xl leading-7 text-gray-600">
+                <p class="mx-auto max-w-2xl leading-7 text-gray-600 dark:text-slate-300">
                     I am a frontend developer who loves building responsive, modern,
                     and user-friendly websites using HTML, Tailwind CSS, JavaScript,
                     and Vue.
@@ -21,31 +21,31 @@
                 <!-- Left Image / Placeholder -->
                 <div>
                     <div
-                        class="mx-auto flex h-72 w-72 items-center justify-center rounded-2xl bg-blue-50 text-6xl font-bold text-blue-600 shadow-md sm:h-80 sm:w-80">
+                        class="mx-auto flex h-72 w-72 items-center justify-center rounded-2xl bg-blue-50 text-6xl font-bold text-blue-600 shadow-md sm:h-80 sm:w-80 ">
                         P
                     </div>
                 </div>
 
                 <!-- Right Text -->
                 <div>
-                    <h2 class="mb-4 text-3xl font-bold text-gray-900">
+                    <h2 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
                         Frontend Developer
                     </h2>
 
-                    <p class="mb-4 leading-7 text-gray-600">
+                    <p class="mb-4 leading-7 text-gray-600 dark:text-slate-300">
                         I have built multiple projects using HTML, Tailwind CSS,
                         JavaScript, FontAwesome, and modern frontend tools. Now I am
                         converting my portfolio into Vue to make it more structured,
                         reusable, and easier to maintain.
                     </p>
 
-                    <p class="mb-6 leading-7 text-gray-600">
+                    <p class="mb-6 leading-7 text-gray-600 dark:text-slate-300">
                         I enjoy creating clean UI, responsive layouts, and interactive
                         user experiences.
                     </p>
 
                     <RouterLink to="/projects"
-                        class="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700">
+                        class="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-500">
                         View My Projects
                         <i class="fa-solid fa-arrow-right ml-2"></i>
                     </RouterLink>

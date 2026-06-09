@@ -41,7 +41,7 @@
                     &copy; {{ currentYear }} A. All rights reserved.
                 </p>
                 <p class="text-xs">
-                    Designed & Built with <i class="fa-solid fa-heart text-red-500 mx-1" aria-hidden="true"></i>
+                    Designed & Developed by Argho Chakma. Built with Vue.js and Tailwind CSS.
                 </p>
             </div>
         </div>

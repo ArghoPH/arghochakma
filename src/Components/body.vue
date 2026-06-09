@@ -18,9 +18,9 @@ onBeforeUnmount(() => {
     if (cleanup) cleanup()
 })
 </script>
-<template>
+<template class="">
     <!-- ABOUT -->
-    <section id="about" class="container mx-auto px-4 sm:px-6 py-16">
+    <section id="about" class="container mx-auto px-4 sm:px-6 py-16 dark:bg-gray-950 transition-colors duration-300">
         <div class="text-center mb-12">
             <span
                 class="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-900 animate-text-flow font-extrabold text-4xl md:text-5xl tracking-tight">
@@ -199,7 +199,8 @@ onBeforeUnmount(() => {
                                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3
+                        class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">
                         Frontend Architecture
                     </h3>
                     <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
@@ -218,7 +219,8 @@ onBeforeUnmount(() => {
                                 d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition-colors">
+                    <h3
+                        class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition-colors">
                         Product Design
                     </h3>
                     <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
@@ -237,7 +239,8 @@ onBeforeUnmount(() => {
                                 d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-rose-600 transition-colors">
+                    <h3
+                        class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-rose-600 transition-colors">
                         Mobile Experience
                     </h3>
                     <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
@@ -256,7 +259,8 @@ onBeforeUnmount(() => {
                                 d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 transition-colors">
+                    <h3
+                        class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 transition-colors">
                         Full-stack Dev
                     </h3>
                     <p class="text-justify text-sm leading-relaxed text-gray-700 dark:text-gray-300">
@@ -268,43 +272,7 @@ onBeforeUnmount(() => {
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-28 px-6 relative overflow-hidden">
-        <!-- Random Bubbles -->
-        <div ref="bubbleContainer" id="bubbles"></div>
 
-        <div class="text-center mb-20 relative z-10">
-            <h2
-                class="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">
-                Let's Work Together
-            </h2>
-            <p class="text-gray-300 text-lg">Ready to build something powerful and impactful?</p>
-        </div>
-
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 relative z-10 glass-card p-14 rounded-3xl shadow-2xl">
-            <!-- Info -->
-            <div class="space-y-8 text-gray-300 text-lg">
-                <p>
-                    <span class="font-semibold text-indigo-400" data-copy="arghochakma2023@gmail.com">Email:</span>
-                    ar@gmail.com
-                </p>
-                <p><span class="font-semibold text-purple-400">Phone:</span> 00000000</p>
-                <p><span class="font-semibold text-cyan-400">Location:</span> Dhaka, Bangladesh</p>
-            </div>
-
-            <!-- Form -->
-            <div class="flex flex-col gap-6">
-                <input type="text" placeholder="Your Name" class="rounded-xl px-5 py-3 focus:outline-none">
-                <input type="email" placeholder="Your Email" class="rounded-xl px-5 py-3 focus:outline-none">
-                <input type="text" placeholder="Subject" class="rounded-xl px-5 py-3 focus:outline-none">
-                <textarea rows="4" placeholder="Your Message"
-                    class="rounded-xl px-5 py-3 focus:outline-none"></textarea>
-                <button class="btn-neon text-white font-semibold px-6 py-4 rounded-xl">
-                    Send Message 🚀
-                </button>
-            </div>
-        </div>
-    </section>
 </template>
 
 <style>
