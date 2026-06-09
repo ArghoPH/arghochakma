@@ -25,12 +25,16 @@ export const projects = [
 
   {
     id: 3,
-    title: 'Weather App',
+    title: 'Video Crop & Trim',
     description:
-      'A weather application that fetches live weather data from an API.',
-    image: '/images/weather.png',
-    tech: ['JavaScript', 'API', 'Tailwind'],
-    liveLink: 'https://your-live-link.com',
-    githubLink: 'https://github.com/yourusername/weather-app',
+      'A video editing app that allows users to crop and trim video clips.',
+    image: '/images/video-crop-trim.png',
+    tech: ['Vue', 'Tailwind', 'JavaScript'],
+    liveLink: 'https://video-crop-trim.vercel.app/',
+    githubLink: 'https://github.com/ArghoPH/Video-Crop-Trim',
   },
+
+  
+    
+ 
 ]
