@@ -14,13 +14,13 @@ export const projects = [
 
   {
     id: 2,
-    title: 'Task Manager App',
+    title: 'Code with Dotnet',
     description:
-      'A task management app with add, edit, delete, and local storage features.',
-    image: '/images/task-manager.png',
-    tech: ['HTML', 'Tailwind', 'JavaScript'],
+      'A documentation website for .NET developers, built with Vue and Tailwind CSS.',
+    image: '/images/code-with-dotnet.png',
+    tech: ['Vue', 'Tailwind', 'JavaScript'],
     liveLink: 'https://your-live-link.com',
-    githubLink: 'https://github.com/yourusername/task-manager',
+    githubLink: 'https://github.com/yourusername/code-with-dotnet',
   },
 
   {
