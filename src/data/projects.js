@@ -1,14 +1,17 @@
+import videoToGif from '@/images/video-to-gif.png'
+
 export const projects = [
   {
     id: 1,
-    title: 'Portfolio Website',
+    title: 'Video to GIF Converter',
     description:
-      'A responsive personal portfolio website built with Vue and Tailwind CSS.',
-    image: '/images/portfolio.png',
+      'A web app that converts video files to GIF format using JavaScript and HTML5.',
+    image: videoToGif,
     tech: ['Vue', 'Tailwind', 'Vite'],
-    liveLink: 'https://your-live-link.com',
-    githubLink: 'https://github.com/yourusername/portfolio',
+    liveLink: 'https://video-to-gif-converter-one.vercel.app/',
+    githubLink: 'https://github.com/ArghoPH/Video-to-GIF-Converter',
   },
+
   {
     id: 2,
     title: 'Task Manager App',
@@ -19,6 +22,7 @@ export const projects = [
     liveLink: 'https://your-live-link.com',
     githubLink: 'https://github.com/yourusername/task-manager',
   },
+
   {
     id: 3,
     title: 'Weather App',

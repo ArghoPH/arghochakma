@@ -5,6 +5,9 @@ defineProps({
         required: true,
     },
 })
+
+import profileImage from '../images/profile-1.png'
+
 </script>
 
 <template>

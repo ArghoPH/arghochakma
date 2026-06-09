@@ -1,6 +1,6 @@
 <template>
-    <main class="bg-white">
-        <section class="container mx-auto px-4 sm:px-6 py-16 dark:bg-gray-950">
+    <main class="bg-white dark:bg-gray-950">
+        <section class="container mx-auto px-4 sm:px-6 py-16 ">
             <!-- Heading -->
             <div class="mb-12 text-center">
                 <p class="mb-3 font-semibold text-blue-600">About Me</p>
