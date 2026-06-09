@@ -6,7 +6,7 @@
 
                 <div class="text-center md:text-left">
                     <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                        A<span class="text-blue-600">.</span>
+                        Argho Chakma<span class="text-blue-600">.</span>
                     </h2>
                     <p class="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
                         Crafting intuitive digital experiences.
