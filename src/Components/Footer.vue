@@ -14,19 +14,19 @@
                 </div>
 
                 <nav aria-label="Social Media Profiles" class="flex items-center gap-6 text-xl">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
+                    <a href="https://github.com/ArghoPH" target="_blank" rel="noopener noreferrer"
                         aria-label="Visit my GitHub profile"
                         class="text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 dark:hover:text-white">
                         <i class="fa-brands fa-github" aria-hidden="true"></i>
                     </a>
 
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"
-                        aria-label="Connect with me on LinkedIn"
+                    <a href="https://www.linkedin.com/in/argho-chakma-0442561ba/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Connect with me on LinkedIn"
                         class="text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 dark:hover:text-blue-400">
                         <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                     </a>
 
-                    <a href="mailto:your.email@example.com" aria-label="Send me an email"
+                    <a href="mailto:arghochakma2023@gmail.com" aria-label="Send me an email"
                         class="text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:text-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 dark:hover:text-red-400">
                         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                     </a>
