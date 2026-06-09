@@ -22,7 +22,7 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-    <main>
+    <main class="bg-white dark:bg-gray-950">
         <section class="container mx-auto px-4 sm:px-6 py-16">
             <!-- Heading -->
             <div class="mb-10 text-center">
@@ -55,7 +55,8 @@ const filteredProjects = computed(() => {
             </div>
 
             <!-- Empty Message -->
-            <p v-else class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600 dark:bg-slate-900 dark:text-slate-300">
+            <p v-else
+                class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600 dark:bg-slate-900 dark:text-slate-300">
                 No projects found in this category.
             </p>
         </section>
