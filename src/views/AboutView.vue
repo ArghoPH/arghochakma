@@ -57,17 +57,17 @@
                 <div class="mb-10 text-center">
                     <p class="mb-3 font-semibold text-blue-600">My Skills</p>
 
-                    <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+                    <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
                         Technologies I Use
                     </h2>
                 </div>
 
                 <div class="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <div v-for="skill in skills" :key="skill.name"
-                        class="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                        class="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:bg-gray-800 dark:border-gray-600">
                         <i :class="skill.icon" class="mb-4 text-4xl text-blue-600"></i>
 
-                        <h3 class="text-lg font-bold text-gray-900">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">
                             {{ skill.name }}
                         </h3>
                     </div>
