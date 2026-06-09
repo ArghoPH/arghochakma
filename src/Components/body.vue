@@ -18,9 +18,9 @@ onBeforeUnmount(() => {
     if (cleanup) cleanup()
 })
 </script>
-<template class="">
+<template class="dark:bg-gray-950">
     <!-- ABOUT -->
-    <section id="about" class="container mx-auto px-4 sm:px-6 py-16 dark:bg-gray-950 transition-colors duration-300">
+    <section id="about" class="container mx-auto px-4 sm:px-6 py-16  transition-colors duration-300">
         <div class="text-center mb-12">
             <span
                 class="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-900 animate-text-flow font-extrabold text-4xl md:text-5xl tracking-tight">
