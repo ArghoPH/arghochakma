@@ -20,148 +20,150 @@ onBeforeUnmount(() => {
 </script>
 <template class="">
     <!-- ABOUT -->
-    <section id="about" class="container dark:bg-gray-950 transition-colors duration-300">
-        <div class="text-center mb-12">
-            <span
-                class="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-900 animate-text-flow font-extrabold text-4xl md:text-5xl tracking-tight">
-                About Me
-            </span>
-            <p class="bg-gradient-to-r from-sky-900 via-blue-400 to-purple-700 animate-text-flow font-bold mt-3">
-                Passionate about creating digital experiences that make a difference
-            </p>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-12 mx-auto px-4 sm:px-6 py-16 ">
-            <!-- Left Section - Modern Styled -->
-            <div
-                class="flex-1 space-y-6 p-6 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white rounded-2xl shadow-2xl">
-
-                <!-- Intro -->
-                <p class="text-lg md:text-xl font-medium tracking-wide">
-                    With over <span class="font-bold text-yellow-400">4 year</span> of experience in
-                    <span class="font-bold decoration-yellow-300 text-yellow-400">Frontend Development</span>
-                    and
-                    <span class="font-bold text-yellow-300">UI/UX design</span>.
+    <section id="about" class="py-20 px-6 relative overflow-hidden dark:bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 py-16  transition-colors duration-300">
+            <div class="text-center mb-12">
+                <span
+                    class="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-900 animate-text-flow font-extrabold text-4xl md:text-5xl tracking-tight">
+                    About Me
+                </span>
+                <p class="bg-gradient-to-r from-sky-900 via-blue-400 to-purple-700 animate-text-flow font-bold mt-3">
+                    Passionate about creating digital experiences that make a difference
                 </p>
-
-                <!-- Stats -->
-                <div class="flex gap-6 mt-4">
-                    <!-- Projects -->
-                    <div
-                        class="flex-1 bg-black bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">12+</h3>
-                        <p class="text-white text-sm md:text-base mt-1">Projects Completed</p>
-                    </div>
-
-                    <!-- Experience -->
-                    <div
-                        class="flex-1 bg-black bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">4+</h3>
-                        <p class="text-white text-sm md:text-base mt-1">Years Experience</p>
-                    </div>
-                </div>
-
-                <!-- Right Arrow -->
-                <div class="mt-4 animate-slide-x flex justify-start items-center gap-2">
-                    <div
-                        class="bg-yellow-300 text-gray-900 px-4 py-2 rounded-full cursor-pointer select-none font-bold">
-                        <p class="text-gray-700">The Skills ❖</p>
-                    </div>
-                </div>
             </div>
 
-            <!-- Right -->
-            <div ref="skillsContainer" id="skills-container"
-                class="relative w-full max-w-[700px] h-[220px] md:h-[300px] bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden rounded-xl">
+            <div class="flex flex-col md:flex-row gap-12">
+                <!-- Left Section - Modern Styled -->
+                <div
+                    class="flex-1 space-y-6 p-6 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white rounded-2xl shadow-2xl">
 
-                <!-- Frontend / Web Basics -->
-                <div
-                    class="skill absolute bg-gradient-to-r from-indigo-700 to-indigo-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Frontend
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-yellow-700 to-yellow-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    JavaScript (ES6+)
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-red-500 to-yellow-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    ASP.Net
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-red-700 to-blue-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Vue3.js
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-orange-600 to-orange-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    HTML5
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-cyan-700 to-cyan-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    CSS3
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-pink-700 to-pink-700 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Tailwind CSS
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Website Design
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-yellow-600 to-red-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    CodeIgnator
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-purple-500 to-purple-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    BootStrap
+                    <!-- Intro -->
+                    <p class="text-lg md:text-xl font-medium tracking-wide">
+                        With over <span class="font-bold text-yellow-400">4 year</span> of experience in
+                        <span class="font-bold decoration-yellow-300 text-yellow-400">Frontend Development</span>
+                        and
+                        <span class="font-bold text-yellow-300">UI/UX design</span>.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="flex gap-6 mt-4">
+                        <!-- Projects -->
+                        <div
+                            class="flex-1 bg-black bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">12+</h3>
+                            <p class="text-white text-sm md:text-base mt-1">Projects Completed</p>
+                        </div>
+
+                        <!-- Experience -->
+                        <div
+                            class="flex-1 bg-black bg-opacity-20 rounded-xl p-4 flex flex-col items-center justify-center hover:bg-opacity-40 transition">
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300">4+</h3>
+                            <p class="text-white text-sm md:text-base mt-1">Years Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <div class="mt-4 animate-slide-x flex justify-start items-center gap-2">
+                        <div
+                            class="bg-yellow-300 text-gray-900 px-4 py-2 rounded-full cursor-pointer select-none font-bold">
+                            <p class="text-gray-700">The Skills ❖</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Backend / Server -->
-                <div
-                    class="skill absolute bg-gradient-to-r from-yellow-400 to-yellow-700 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    PHP
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-blue-700 to-blue-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    MySQL
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-emerald-700 to-emerald-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    REST API
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-teal-500 to-teal-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    REST API Integration
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-orange-600 to-purple-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Web Development
-                </div>
+                <!-- Right -->
+                <div ref="skillsContainer" id="skills-container"
+                    class="relative w-full max-w-[700px] h-[220px] md:h-[300px] bg-gradient-to-r from-gray-900 to-gray-900 overflow-hidden rounded-xl">
 
-                <!-- Design / UI/UX -->
-                <div
-                    class="skill absolute bg-gradient-to-r from-rose-700 to-rose-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    UI/UX
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-fuchsia-700 to-fuchsia-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Figma
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-purple-600 to-purple-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    UI/UX Design
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-fuchsia-600 to-indigo-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    User Flow & Wireframe
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-rose-500 to-fuchsia-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Git
-                </div>
-                <div
-                    class="skill absolute bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
-                    Responsive Design
+                    <!-- Frontend / Web Basics -->
+                    <div
+                        class="skill absolute bg-gradient-to-r from-indigo-700 to-indigo-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Frontend
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-yellow-700 to-yellow-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        JavaScript (ES6+)
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-red-500 to-yellow-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        ASP.Net
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-red-700 to-blue-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Vue3.js
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-orange-600 to-orange-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        HTML5
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-cyan-700 to-cyan-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        CSS3
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-pink-700 to-pink-700 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Tailwind CSS
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Website Design
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-yellow-600 to-red-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        CodeIgnator
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-purple-500 to-purple-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        BootStrap
+                    </div>
+
+                    <!-- Backend / Server -->
+                    <div
+                        class="skill absolute bg-gradient-to-r from-yellow-400 to-yellow-700 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        PHP
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-blue-700 to-blue-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        MySQL
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-emerald-700 to-emerald-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        REST API
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-teal-500 to-teal-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        REST API Integration
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-orange-600 to-purple-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Web Development
+                    </div>
+
+                    <!-- Design / UI/UX -->
+                    <div
+                        class="skill absolute bg-gradient-to-r from-rose-700 to-rose-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        UI/UX
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-fuchsia-700 to-fuchsia-900 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Figma
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-purple-600 to-purple-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        UI/UX Design
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-fuchsia-600 to-indigo-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        User Flow & Wireframe
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-rose-500 to-fuchsia-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Git
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        Responsive Design
+                    </div>
                 </div>
             </div>
         </div>
