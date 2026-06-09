@@ -20,7 +20,7 @@ onBeforeUnmount(() => {
 </script>
 <template class="">
     <!-- ABOUT -->
-    <section id="about" class="container mx-auto px-4 sm:px-6 py-16 dark:bg-gray-950 transition-colors duration-300">
+    <section id="about" class="container dark:bg-gray-950 transition-colors duration-300">
         <div class="text-center mb-12">
             <span
                 class="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-900 animate-text-flow font-extrabold text-4xl md:text-5xl tracking-tight">
@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
             </p>
         </div>
 
-        <div class="flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col md:flex-row gap-12 mx-auto px-4 sm:px-6 py-16 ">
             <!-- Left Section - Modern Styled -->
             <div
                 class="flex-1 space-y-6 p-6 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white rounded-2xl shadow-2xl">
