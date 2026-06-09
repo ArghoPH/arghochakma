@@ -19,8 +19,8 @@ export const projects = [
       'A documentation website for .NET developers, built with Vue and Tailwind CSS.',
     image: '/images/code-with-dotnet.png',
     tech: ['Vue', 'Tailwind', 'JavaScript'],
-    liveLink: 'https://your-live-link.com',
-    githubLink: 'https://github.com/yourusername/code-with-dotnet',
+    liveLink: 'https://codewithdotnet.vercel.app/',
+    githubLink: 'https://github.com/ArghoPH/codewithdotnet',
   },
 
   {
