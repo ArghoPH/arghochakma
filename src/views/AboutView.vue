@@ -22,7 +22,12 @@
                 <div>
                     <div
                         class="mx-auto flex h-72 w-72 items-center justify-center rounded-2xl bg-blue-50 text-6xl font-bold text-blue-600 shadow-md sm:h-80 sm:w-80 ">
-                        P
+                        <div class="h-full w-full overflow-hidden rounded-2xl bg-slate-100 dark:bg-gray-800">
+
+                            <img :src="profileImage" alt="Profile"
+                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+
+                        </div>
                     </div>
                 </div>
 
@@ -78,6 +83,7 @@
 </template>
 
 <script setup>
+import profileImage from '../images/profile-1.png'
 const skills = [
     {
         name: 'HTML',
