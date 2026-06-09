@@ -30,8 +30,8 @@ export const projects = [
       'A video editing app that allows users to crop and trim video clips.',
     image: '/images/video-crop-trim.png',
     tech: ['Vue', 'Tailwind', 'JavaScript'],
-    liveLink: 'https://video-crop-trim.vercel.app/',
-    githubLink: 'https://github.com/ArghoPH/Video-Crop-Trim',
+    liveLink: 'https://video-crop-and-trim.vercel.app/',
+    githubLink: 'https://github.com/ArghoPH/Video-Crop-and-Trim',
   },
 
   
