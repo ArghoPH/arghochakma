@@ -9,8 +9,9 @@ defineProps({
 
 <template>
     <div
-        class="overflow-hidden rounded-2xl border shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
-        <img :src="project.image" :alt="project.title" class="w-full object-cover h-44 sm:h-52 md:h-56 lg:h-48 xl:h-52" />
+        class="overflow-hidden rounded-2xl border-2 border-slate-100 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
+        <img :src="project.image" :alt="project.title"
+            class="w-full object-cover h-44 sm:h-52 md:h-56 lg:h-48 xl:h-52" />
 
         <div class="p-6">
             <h3 class="mb-3 text-2xl font-bold  dark:text-white">

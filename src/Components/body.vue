@@ -190,9 +190,9 @@ onBeforeUnmount(() => {
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="100">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-out">
                     <div
                         class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
@@ -211,8 +211,8 @@ onBeforeUnmount(() => {
                     </p>
                 </div>
 
-                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                     <div
                         class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
@@ -231,10 +231,11 @@ onBeforeUnmount(() => {
                     </p>
                 </div>
 
-                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                     <div
-                        class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        class=" mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-rose-50
+                    text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-all duration-300 shadow-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -251,8 +252,8 @@ onBeforeUnmount(() => {
                     </p>
                 </div>
 
-                <div class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="400">
+                <div
+                    class="group relative bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                     <div
                         class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
