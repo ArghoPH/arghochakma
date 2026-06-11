@@ -40,9 +40,9 @@ function handleSubmit() {
                 <div class="space-y-8 text-gray-300 text-lg">
                     <p>
                         <span class="font-semibold text-indigo-400" data-copy="arghochakma2023@gmail.com">Email:</span>
-                        ar@gmail.com
+                        arghochakma2023@gmail.com
                     </p>
-                    <p><span class="font-semibold text-purple-400">Phone:</span> 00000000</p>
+                    <p><span class="font-semibold text-purple-400">Phone:</span>01999358618</p>
                     <p><span class="font-semibold text-cyan-400">Location:</span> Dhaka, Bangladesh</p>
                 </div>
 

@@ -34,6 +34,17 @@ export const projects = [
     githubLink: 'https://github.com/ArghoPH/Video-Crop-and-Trim',
   },
 
+  {
+    id: 4,
+    title: 'Complete Full Stack E-Commerce Website',
+    description:
+      'A full-stack e-commerce website built with modern web technologies.',
+    image: '/images/ecommerce-website.png',
+    tech: ['Vue', 'Tailwind', 'Node.js', 'MongoDB'],
+    liveLink: 'https://shopsphere-red.vercel.app/',
+    githubLink: 'https://github.com/ArghoPH/shopsphere',
+  }
+
   
     
  

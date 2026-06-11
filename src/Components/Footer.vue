@@ -51,6 +51,6 @@
 <script setup>
 import { computed } from 'vue';
 
-// Dynamically generate the current year so you never have to update it manually
+// Dynamically generate the current year so never have to update it manually
 const currentYear = computed(() => new Date().getFullYear());
 </script>
