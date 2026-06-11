@@ -1,17 +1,30 @@
 import videoToGif from '@/images/video-to-gif.png'
 
 export const projects = [
+ 
   {
-    id: 4,
-    title: 'Video to GIF Converter',
+    id: 1,
+    title: 'ShopSphere E-commerce Platform',
     description:
-      'A web app that converts video files to GIF format using JavaScript and HTML5.',
-    image: videoToGif,
-    tech: ['Vue', 'Tailwind', 'Vite'],
-    liveLink: 'https://video-to-gif-converter-one.vercel.app/',
-    githubLink: 'https://github.com/ArghoPH/Video-to-GIF-Converter',
+      'ShopSphere is a production-ready, full-stack e-commerce solution built using a decoupled architecture. It features a high-performance ASP.NET Core Web API backend and a reactive, modern Vue 3 frontend, seamlessly integrated with Supabase PostgreSQL and Supabase Storage.',
+    image: '/images/ecommerce-website.png',
+tech: [
+  'Vue',
+  'Vite',
+  'Tailwind CSS',
+  'ASP.NET Core',
+  'C#',
+  'Entity Framework Core',
+  'PostgreSQL',
+  'Supabase',
+  'Docker',
+  'Render',
+  'Vercel'
+],
+    liveLink: 'https://shopsphere-red.vercel.app/',
+    githubLink: 'https://github.com/ArghoPH/shopsphere',
   },
-
+  
   {
     id: 2,
     title: 'Code with Dotnet',
@@ -34,30 +47,18 @@ export const projects = [
     githubLink: 'https://github.com/ArghoPH/Video-Crop-and-Trim',
   },
 
-  {
-    id: 1,
-    title: 'ShopSphere E-commerce Platform',
-    description:
-      'ShopSphere is a production-ready, full-stack e-commerce solution built using a decoupled architecture. It features a high-performance ASP.NET Core Web API backend and a reactive, modern Vue 3 frontend, seamlessly integrated with Supabase PostgreSQL and Supabase Storage.',
-    image: '/images/ecommerce-website.png',
-tech: [
-  'Vue',
-  'Vite',
-  'Tailwind CSS',
-  'ASP.NET Core',
-  'C#',
-  'Entity Framework Core',
-  'PostgreSQL',
-  'Supabase',
-  'Docker',
-  'Render',
-  'Vercel'
-],
-    liveLink: 'https://shopsphere-red.vercel.app/',
-    githubLink: 'https://github.com/ArghoPH/shopsphere',
-  }
 
-  
+
+   {
+    id: 4,
+    title: 'Video to GIF Converter',
+    description:
+      'A web app that converts video files to GIF format using JavaScript and HTML5.',
+    image: videoToGif,
+    tech: ['Vue', 'Tailwind', 'Vite'],
+    liveLink: 'https://video-to-gif-converter-one.vercel.app/',
+    githubLink: 'https://github.com/ArghoPH/Video-to-GIF-Converter',
+  },
     
  
 ]
