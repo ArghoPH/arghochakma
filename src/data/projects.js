@@ -2,7 +2,7 @@ import videoToGif from '@/images/video-to-gif.png'
 
 export const projects = [
   {
-    id: 1,
+    id: 4,
     title: 'Video to GIF Converter',
     description:
       'A web app that converts video files to GIF format using JavaScript and HTML5.',
