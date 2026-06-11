@@ -35,7 +35,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 1,
     title: 'ShopSphere E-commerce Platform',
     description:
       'ShopSphere is a production-ready, full-stack e-commerce solution built using a decoupled architecture. It features a high-performance ASP.NET Core Web API backend and a reactive, modern Vue 3 frontend, seamlessly integrated with Supabase PostgreSQL and Supabase Storage.',
