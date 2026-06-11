@@ -31,7 +31,7 @@ tech: [
     description:
       'A documentation website for .NET developers, built with Vue and Tailwind CSS.',
     image: '/images/code-with-dotnet.png',
-    tech: ['Vue', 'Tailwind', 'JavaScript'],
+    tech: ['Vue', 'Tailwind', 'JavaScript', 'C#', 'ASP.NET Core', 'Vercel', 'Vite'],
     liveLink: 'https://codewithdotnet.vercel.app/',
     githubLink: 'https://github.com/ArghoPH/codewithdotnet',
   },
