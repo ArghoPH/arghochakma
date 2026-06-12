@@ -51,7 +51,7 @@ function handleSubmit() {
                     <textarea rows="4" placeholder="Your Message"
                         class="rounded-xl px-5 py-3 focus:outline-none"></textarea>
                     <button class="btn-neon text-white font-semibold px-6 py-4 rounded-xl">
-                        Send Message 🚀
+                        Send Message for more information
                     </button>
                 </div>
             </div>
