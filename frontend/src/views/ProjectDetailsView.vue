@@ -1,5 +1,5 @@
 ﻿<script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 import { projectService } from '@/services/projectService'
@@ -10,6 +10,19 @@ const project = ref(null)
 const isLoading = ref(true)
 const errorMessage = ref('')
 const activeImageIndex = ref(0)
+
+const isModalOpen = ref(false)
+const modalImageIndex = ref(0)
+const zoom = ref(1)
+const imagePosition = reactive({
+  x: 0,
+  y: 0
+})
+const isDragging = ref(false)
+const dragStart = reactive({
+  x: 0,
+  y: 0
+})
 
 const galleryImages = computed(() => {
   if (!project.value) {
@@ -41,6 +54,89 @@ const activeImage = computed(() => {
   return galleryImages.value[activeImageIndex.value] || null
 })
 
+const activeModalImage = computed(() => {
+  return galleryImages.value[modalImageIndex.value] || null
+})
+
+const modalImageStyle = computed(() => {
+  return {
+    transform: `translate(${imagePosition.x}px, ${imagePosition.y}px) scale(${zoom.value})`
+  }
+})
+
+function resetZoom() {
+  zoom.value = 1
+  imagePosition.x = 0
+  imagePosition.y = 0
+}
+
+function clampZoom(value) {
+  return Math.min(Math.max(value, 1), 5)
+}
+
+function zoomIn() {
+  zoom.value = clampZoom(Number((zoom.value + 0.25).toFixed(2)))
+}
+
+function zoomOut() {
+  zoom.value = clampZoom(Number((zoom.value - 0.25).toFixed(2)))
+
+  if (zoom.value === 1) {
+    imagePosition.x = 0
+    imagePosition.y = 0
+  }
+}
+
+function handleWheelZoom(event) {
+  event.preventDefault()
+
+  const direction = event.deltaY < 0 ? 0.2 : -0.2
+  zoom.value = clampZoom(Number((zoom.value + direction).toFixed(2)))
+
+  if (zoom.value === 1) {
+    imagePosition.x = 0
+    imagePosition.y = 0
+  }
+}
+
+function startDragging(event) {
+  if (event.button !== 0 || zoom.value <= 1) {
+    return
+  }
+
+  event.preventDefault()
+
+  isDragging.value = true
+  dragStart.x = event.clientX - imagePosition.x
+  dragStart.y = event.clientY - imagePosition.y
+}
+
+function dragImage(event) {
+  if (!isDragging.value || zoom.value <= 1) {
+    return
+  }
+
+  imagePosition.x = event.clientX - dragStart.x
+  imagePosition.y = event.clientY - dragStart.y
+}
+
+function stopDragging() {
+  isDragging.value = false
+}
+
+function openImageModal(index) {
+  modalImageIndex.value = index
+  isModalOpen.value = true
+  resetZoom()
+  document.body.style.overflow = 'hidden'
+}
+
+function closeImageModal() {
+  isModalOpen.value = false
+  resetZoom()
+  document.body.style.overflow = ''
+}
+
 function goToPreviousImage() {
   if (!galleryImages.value.length) {
     return
@@ -63,6 +159,58 @@ function goToNextImage() {
       : activeImageIndex.value + 1
 }
 
+function goToPreviousModalImage() {
+  if (!galleryImages.value.length) {
+    return
+  }
+
+  modalImageIndex.value =
+    modalImageIndex.value === 0
+      ? galleryImages.value.length - 1
+      : modalImageIndex.value - 1
+
+  resetZoom()
+}
+
+function goToNextModalImage() {
+  if (!galleryImages.value.length) {
+    return
+  }
+
+  modalImageIndex.value =
+    modalImageIndex.value === galleryImages.value.length - 1
+      ? 0
+      : modalImageIndex.value + 1
+
+  resetZoom()
+}
+
+function handleKeydown(event) {
+  if (!isModalOpen.value) {
+    return
+  }
+
+  if (event.key === 'Escape') {
+    closeImageModal()
+  }
+
+  if (event.key === 'ArrowLeft') {
+    goToPreviousModalImage()
+  }
+
+  if (event.key === 'ArrowRight') {
+    goToNextModalImage()
+  }
+
+  if (event.key === '+') {
+    zoomIn()
+  }
+
+  if (event.key === '-') {
+    zoomOut()
+  }
+}
+
 async function loadProject() {
   isLoading.value = true
   errorMessage.value = ''
@@ -76,7 +224,15 @@ async function loadProject() {
   }
 }
 
-onMounted(loadProject)
+onMounted(() => {
+  loadProject()
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown)
+  document.body.style.overflow = ''
+})
 </script>
 
 <template>
@@ -160,12 +316,22 @@ onMounted(loadProject)
               </div>
             </div>
 
-            <img
+            <button
               v-if="activeImage"
-              :src="activeImage.url"
-              :alt="activeImage.label"
-              class="mb-4 h-[420px] w-full rounded-2xl object-cover"
-            />
+              type="button"
+              @click="openImageModal(activeImageIndex)"
+              class="group mb-4 block w-full overflow-hidden rounded-2xl bg-black"
+            >
+              <img
+                :src="activeImage.url"
+                :alt="activeImage.label"
+                class="h-[420px] w-full object-contain transition duration-300 group-hover:scale-[1.02]"
+              />
+
+              <span class="block bg-black/70 px-4 py-3 text-center text-sm font-semibold text-white">
+                Click image to view full screen
+              </span>
+            </button>
 
             <div
               v-if="galleryImages.length > 1"
@@ -222,5 +388,95 @@ onMounted(loadProject)
         </div>
       </article>
     </section>
+
+    <Teleport to="body">
+      <div
+        v-if="isModalOpen"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 p-4 backdrop-blur-md"
+        @click.self="closeImageModal"
+        @mousemove="dragImage"
+        @mouseup="stopDragging"
+        @mouseleave="stopDragging"
+      >
+        <button
+          type="button"
+          @click="closeImageModal"
+          class="absolute right-5 top-5 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-3xl font-bold text-white backdrop-blur transition hover:bg-white/25"
+          aria-label="Close image modal"
+        >
+          ×
+        </button>
+
+        <div class="absolute left-5 top-5 z-20 rounded-2xl bg-black/40 px-4 py-3 text-white backdrop-blur">
+          <p class="text-sm font-semibold">
+            {{ activeModalImage?.label }}
+          </p>
+
+          <p class="text-xs text-white/80">
+            {{ modalImageIndex + 1 }} / {{ galleryImages.length }} · Zoom {{ Math.round(zoom * 100) }}%
+          </p>
+        </div>
+
+        <div
+          class="relative flex h-[82vh] w-[94vw] items-center justify-center overflow-hidden rounded-3xl bg-black/30"
+          @wheel.prevent="handleWheelZoom"
+        >
+          <img
+            v-if="activeModalImage"
+            :src="activeModalImage.url"
+            :alt="activeModalImage.label"
+            draggable="false"
+            class="max-h-full max-w-full select-none object-contain transition-transform duration-75"
+            :class="zoom > 1 ? isDragging ? 'cursor-grabbing' : 'cursor-grab' : 'cursor-zoom-in'"
+            :style="modalImageStyle"
+            @mousedown="startDragging"
+            @mouseup="stopDragging"
+            @dblclick="zoom === 1 ? zoomIn() : resetZoom()"
+          />
+        </div>
+
+        <div class="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-wrap items-center justify-center gap-3 rounded-2xl bg-black/45 px-4 py-3 text-white backdrop-blur">
+          <button
+            type="button"
+            @click="goToPreviousModalImage"
+            class="rounded-xl bg-white/15 px-4 py-2 font-semibold transition hover:bg-white/25"
+          >
+            Previous
+          </button>
+
+          <button
+            type="button"
+            @click="zoomOut"
+            class="rounded-xl bg-white/15 px-4 py-2 font-semibold transition hover:bg-white/25"
+          >
+            Zoom -
+          </button>
+
+          <button
+            type="button"
+            @click="resetZoom"
+            class="rounded-xl bg-white/15 px-4 py-2 font-semibold transition hover:bg-white/25"
+          >
+            Reset
+          </button>
+
+          <button
+            type="button"
+            @click="zoomIn"
+            class="rounded-xl bg-white/15 px-4 py-2 font-semibold transition hover:bg-white/25"
+          >
+            Zoom +
+          </button>
+
+          <button
+            type="button"
+            @click="goToNextModalImage"
+            class="rounded-xl bg-white/15 px-4 py-2 font-semibold transition hover:bg-white/25"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </Teleport>
   </main>
 </template>
