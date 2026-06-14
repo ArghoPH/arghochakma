@@ -1,9 +1,14 @@
-﻿const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+﻿import { authService } from '@/services/authService'
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
 
 async function request(path, options = {}) {
+  const token = authService.getToken()
+
   const response = await fetch(`${API_BASE_URL}${path}`, {
     headers: {
       'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...(options.headers || {}),
     },
     ...options,
@@ -32,5 +37,25 @@ export const projectService = {
 
   getProjectById(id) {
     return request(`/api/projects/${id}`)
+  },
+
+  createProject(payload) {
+    return request('/api/projects', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    })
+  },
+
+  updateProject(id, payload) {
+    return request(`/api/projects/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(payload),
+    })
+  },
+
+  deleteProject(id) {
+    return request(`/api/projects/${id}`, {
+      method: 'DELETE',
+    })
   },
 }
