@@ -8,11 +8,37 @@ const props = defineProps({
   }
 })
 
-const shortDescription = computed(() => {
-  const text = props.project.description
-    ? props.project.description.replace(/\s+/g, ' ').trim()
-    : ''
+function decodeHtml(value) {
+  if (!value) {
+    return ''
+  }
 
+  const textarea = document.createElement('textarea')
+  textarea.innerHTML = value
+  return textarea.value
+}
+
+function stripHtmlToText(value) {
+  if (!value || typeof value !== 'string') {
+    return ''
+  }
+
+  const withoutTags = value
+    .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<\/p>/gi, ' ')
+    .replace(/<\/div>/gi, ' ')
+    .replace(/<\/li>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+
+  return decodeHtml(withoutTags)
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+const shortDescription = computed(() => {
+  const text = stripHtmlToText(props.project.description)
   const maxLength = 160
 
   if (text.length <= maxLength) {
@@ -37,7 +63,7 @@ const extraTechCount = computed(() => {
 
 <template>
   <article class="group overflow-hidden rounded-3xl bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-900">
-    <RouterLink :to="`/projects/${project.slug}`" class="block overflow-hidden">
+    <RouterLink :to="`/projects/${project.slug}`" class="block overflow-hidden bg-black">
       <img
         :src="project.imageUrl || '/images/ecommerce-website.png'"
         :alt="project.title"
@@ -69,8 +95,8 @@ const extraTechCount = computed(() => {
         </h3>
       </RouterLink>
 
-      <p class="mb-6 text-gray-600 dark:text-slate-300">
-        {{ shortDescription }}
+      <p class="mb-6 min-h-[84px] text-gray-600 dark:text-slate-300">
+        {{ shortDescription || 'No description available.' }}
       </p>
 
       <div class="flex flex-wrap gap-3">
