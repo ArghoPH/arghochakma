@@ -333,12 +333,12 @@ onUnmounted(() => {
           <div class="mt-10 flex flex-wrap gap-3">
             <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener noreferrer"
               class="rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700">
-              Visit Live Project
+              <i><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i></i> Visit Live Project
             </a>
 
             <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" rel="noopener noreferrer"
               class="rounded-xl border border-gray-300 px-5 py-3 font-semibold text-gray-700 transition hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-200">
-              View GitHub
+              <i><i class="fa-brands fa-github mr-2"></i></i> View GitHub
             </a>
           </div>
         </div>
@@ -527,4 +527,3 @@ onUnmounted(() => {
   }
 }
 </style>
-
