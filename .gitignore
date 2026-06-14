@@ -37,3 +37,20 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Frontend
+**/node_modules/
+**/dist/
+
+# Backend
+**/bin/
+**/obj/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vs/
+*.user
