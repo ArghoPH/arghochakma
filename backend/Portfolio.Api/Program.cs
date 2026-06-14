@@ -41,9 +41,22 @@ builder.Services
         };
     });
 
-var allowedOrigins = builder.Configuration
+var configuredOrigins = builder.Configuration
     .GetSection("Cors:AllowedOrigins")
-    .Get<string[]>() ?? new[] { "http://localhost:5173", "http://localhost:5174", "http://localhost:5175" };
+    .Get<string[]>() ?? Array.Empty<string>();
+
+var defaultOrigins = new[]
+{
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    "https://argho-chakma.vercel.app"
+};
+
+var allowedOrigins = configuredOrigins
+    .Concat(defaultOrigins)
+    .Distinct()
+    .ToArray();
 
 builder.Services.AddCors(options =>
 {
@@ -58,7 +71,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseCors("Frontend");
 
