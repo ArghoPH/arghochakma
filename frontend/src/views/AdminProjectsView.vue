@@ -45,6 +45,8 @@ function logout() {
   authService.logout()
   router.push('/admin/login')
 }
+
+onMounted(loadProjects)
 </script>
 
 <template>
@@ -383,3 +385,4 @@ function logout() {
   transition: 0.2s;
 }
 </style>
+
