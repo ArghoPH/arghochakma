@@ -498,6 +498,13 @@ onUnmounted(() => {
   border-top: 1px solid #cbd5e1;
 }
 
+.project-rich-content :deep([style*='color: black']),
+.project-rich-content :deep([style*='color:#000']),
+.project-rich-content :deep([style*='color: #000']),
+.project-rich-content :deep([style*='rgb(0, 0, 0)']) {
+  color: inherit !important;
+}
+
 @media (prefers-color-scheme: dark) {
   .project-rich-content {
     color: #cbd5e1;
@@ -520,3 +527,4 @@ onUnmounted(() => {
   }
 }
 </style>
+

@@ -75,6 +75,14 @@ const FontSize = Extension.create({
   }
 })
 
+function cleanPastedHtml(html) {
+  return html
+    .replace(/background-color:\s*[^;"]+;?/gi, '')
+    .replace(/color:\s*[^;"]+;?/gi, '')
+    .replace(/font-family:\s*[^;"]+;?/gi, '')
+    .replace(/style="\s*;?\s*"/gi, '')
+}
+
 const editor = useEditor({
   content: props.modelValue || '<p></p>',
   extensions: [
@@ -112,6 +120,9 @@ const editor = useEditor({
   editorProps: {
     attributes: {
       class: 'rich-editor-content'
+    },
+    transformPastedHTML(html) {
+      return cleanPastedHtml(html)
     }
   },
   onUpdate({ editor }) {
@@ -365,6 +376,13 @@ onBeforeUnmount(() => {
   margin: 1rem 0;
 }
 
+:deep(.rich-editor-content [style*='color: black']),
+:deep(.rich-editor-content [style*='color:#000']),
+:deep(.rich-editor-content [style*='color: #000']),
+:deep(.rich-editor-content [style*='rgb(0, 0, 0)']) {
+  color: inherit !important;
+}
+
 @media (prefers-color-scheme: dark) {
   .editor-btn,
   .editor-select {
@@ -383,4 +401,6 @@ onBeforeUnmount(() => {
   }
 }
 </style>
+
+
 
