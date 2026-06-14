@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Api.Data;
 using Portfolio.Api.Dtos.Projects;
@@ -58,6 +59,7 @@ public class ProjectsController : ControllerBase
         return Ok(project);
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult<Project>> CreateProject(CreateProjectRequest request)
     {
@@ -83,6 +85,7 @@ public class ProjectsController : ControllerBase
         return CreatedAtAction(nameof(GetProjectById), new { id = project.Id }, project);
     }
 
+    [Authorize]
     [HttpPut("{id:guid}")]
     public async Task<IActionResult> UpdateProject(Guid id, UpdateProjectRequest request)
     {
@@ -110,6 +113,7 @@ public class ProjectsController : ControllerBase
         return NoContent();
     }
 
+    [Authorize]
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> DeleteProject(Guid id)
     {
@@ -164,3 +168,4 @@ public class ProjectsController : ControllerBase
             : slug;
     }
 }
+
