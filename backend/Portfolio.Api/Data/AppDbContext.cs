@@ -32,7 +32,7 @@ public class AppDbContext : DbContext
                 .IsRequired();
 
             entity.Property(project => project.Description)
-                .HasMaxLength(1000)
+                .HasColumnType("text")
                 .IsRequired();
 
             entity.Property(project => project.ImageUrl)
