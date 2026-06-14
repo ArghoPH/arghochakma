@@ -3,6 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 import { projectService } from '@/services/projectService'
+import { uploadService } from '@/services/uploadService'
 
 const route = useRoute()
 const router = useRouter()
@@ -11,7 +12,9 @@ const isEditMode = computed(() => Boolean(route.params.id))
 
 const isLoading = ref(false)
 const isSaving = ref(false)
+const isUploadingImage = ref(false)
 const errorMessage = ref('')
+const imageUploadMessage = ref('')
 
 const form = ref({
   title: '',
@@ -63,6 +66,30 @@ async function loadProject() {
     console.error(error)
   } finally {
     isLoading.value = false
+  }
+}
+
+async function handleImageChange(event) {
+  const file = event.target.files?.[0]
+
+  if (!file) {
+    return
+  }
+
+  imageUploadMessage.value = ''
+  errorMessage.value = ''
+  isUploadingImage.value = true
+
+  try {
+    const result = await uploadService.uploadImage(file)
+    form.value.imageUrl = result.imageUrl
+    imageUploadMessage.value = 'Image uploaded successfully.'
+  } catch (error) {
+    errorMessage.value = 'Could not upload image.'
+    console.error(error)
+  } finally {
+    isUploadingImage.value = false
+    event.target.value = ''
   }
 }
 
@@ -145,19 +172,48 @@ onMounted(loadProject)
           ></textarea>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2">
-          <div>
-            <label class="mb-2 block font-medium text-gray-700 dark:text-slate-200">
-              Image URL
-            </label>
-            <input
-              v-model="form.imageUrl"
-              type="text"
-              class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-              placeholder="/images/example.png"
-            />
-          </div>
+        <div class="rounded-2xl border border-gray-200 p-5 dark:border-slate-700">
+          <label class="mb-2 block font-medium text-gray-700 dark:text-slate-200">
+            Project Image
+          </label>
 
+          <input
+            type="file"
+            accept="image/jpeg,image/png,image/webp,image/gif"
+            @change="handleImageChange"
+            class="mb-4 block w-full text-sm text-gray-600 file:mr-4 file:rounded-lg file:border-0 file:bg-blue-600 file:px-4 file:py-2 file:font-semibold file:text-white hover:file:bg-blue-700 dark:text-slate-300"
+          />
+
+          <p
+            v-if="isUploadingImage"
+            class="mb-3 rounded-xl bg-blue-50 px-4 py-3 text-sm text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+          >
+            Uploading image...
+          </p>
+
+          <p
+            v-if="imageUploadMessage"
+            class="mb-3 rounded-xl bg-green-50 px-4 py-3 text-sm text-green-700 dark:bg-green-950 dark:text-green-300"
+          >
+            {{ imageUploadMessage }}
+          </p>
+
+          <input
+            v-model="form.imageUrl"
+            type="text"
+            class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+            placeholder="Image URL will appear here after upload"
+          />
+
+          <img
+            v-if="form.imageUrl"
+            :src="form.imageUrl"
+            alt="Project preview"
+            class="mt-4 h-56 w-full rounded-2xl object-cover"
+          />
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
           <div>
             <label class="mb-2 block font-medium text-gray-700 dark:text-slate-200">
               Live URL
@@ -169,18 +225,18 @@ onMounted(loadProject)
               placeholder="https://example.com"
             />
           </div>
-        </div>
 
-        <div>
-          <label class="mb-2 block font-medium text-gray-700 dark:text-slate-200">
-            GitHub URL
-          </label>
-          <input
-            v-model="form.githubUrl"
-            type="url"
-            class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-            placeholder="https://github.com/username/repo"
-          />
+          <div>
+            <label class="mb-2 block font-medium text-gray-700 dark:text-slate-200">
+              GitHub URL
+            </label>
+            <input
+              v-model="form.githubUrl"
+              type="url"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+              placeholder="https://github.com/username/repo"
+            />
+          </div>
         </div>
 
         <div>
@@ -218,7 +274,7 @@ onMounted(loadProject)
 
         <button
           type="submit"
-          :disabled="isSaving"
+          :disabled="isSaving || isUploadingImage"
           class="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {{ isSaving ? 'Saving...' : isEditMode ? 'Update Project' : 'Create Project' }}
