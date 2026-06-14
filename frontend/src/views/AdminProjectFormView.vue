@@ -1,7 +1,8 @@
 ﻿<script setup>
+
 import { computed, onMounted, reactive, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-
+import RichTextEditor from '@/components/RichTextEditor.vue'
 import { projectService } from '@/services/projectService'
 import { uploadService } from '@/services/uploadService'
 
@@ -245,7 +246,8 @@ onMounted(loadProject)
 <template>
   <main class="min-h-screen bg-gray-50 px-4 py-10 dark:bg-gray-950">
     <section class="container mx-auto max-w-5xl">
-      <div class="mb-8 flex flex-col justify-between gap-4 rounded-3xl bg-white p-6 shadow-sm dark:bg-slate-900 md:flex-row md:items-center">
+      <div
+        class="mb-8 flex flex-col justify-between gap-4 rounded-3xl bg-white p-6 shadow-sm dark:bg-slate-900 md:flex-row md:items-center">
         <div>
           <p class="mb-2 font-semibold text-blue-600 dark:text-blue-400">
             Admin Panel
@@ -256,37 +258,25 @@ onMounted(loadProject)
           </h1>
         </div>
 
-        <RouterLink
-          to="/admin/projects"
-          class="rounded-xl border border-gray-300 px-5 py-3 text-center font-semibold text-gray-700 transition hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-200"
-        >
+        <RouterLink to="/admin/projects"
+          class="rounded-xl border border-gray-300 px-5 py-3 text-center font-semibold text-gray-700 transition hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-200">
           Back to Projects
         </RouterLink>
       </div>
 
-      <p
-        v-if="isLoading"
-        class="rounded-xl bg-white p-8 text-center text-gray-600 shadow-sm dark:bg-slate-900 dark:text-slate-300"
-      >
+      <p v-if="isLoading"
+        class="rounded-xl bg-white p-8 text-center text-gray-600 shadow-sm dark:bg-slate-900 dark:text-slate-300">
         Loading project...
       </p>
 
-      <form
-        v-else
-        @submit.prevent="saveProject"
-        class="rounded-3xl bg-white p-6 shadow-sm dark:bg-slate-900"
-      >
-        <p
-          v-if="errorMessage"
-          class="mb-5 rounded-xl bg-red-50 px-4 py-3 text-red-600 dark:bg-red-950 dark:text-red-300"
-        >
+      <form v-else @submit.prevent="saveProject" class="rounded-3xl bg-white p-6 shadow-sm dark:bg-slate-900">
+        <p v-if="errorMessage"
+          class="mb-5 rounded-xl bg-red-50 px-4 py-3 text-red-600 dark:bg-red-950 dark:text-red-300">
           {{ errorMessage }}
         </p>
 
-        <p
-          v-if="successMessage"
-          class="mb-5 rounded-xl bg-green-50 px-4 py-3 text-green-600 dark:bg-green-950 dark:text-green-300"
-        >
+        <p v-if="successMessage"
+          class="mb-5 rounded-xl bg-green-50 px-4 py-3 text-green-600 dark:bg-green-950 dark:text-green-300">
           {{ successMessage }}
         </p>
 
@@ -296,12 +286,8 @@ onMounted(loadProject)
               Project Title
             </label>
 
-            <input
-              v-model="form.title"
-              type="text"
-              required
-              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-            />
+            <input v-model="form.title" type="text" required
+              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white" />
           </div>
 
           <div>
@@ -309,12 +295,7 @@ onMounted(loadProject)
               Description
             </label>
 
-            <textarea
-              v-model="form.description"
-              required
-              rows="10"
-              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-            ></textarea>
+            <RichTextEditor v-model="form.description" />
           </div>
 
           <div class="grid gap-6 md:grid-cols-2">
@@ -323,21 +304,14 @@ onMounted(loadProject)
                 Cover Image
               </label>
 
-              <input
-                type="file"
-                accept="image/*"
-                @change="uploadCoverImage"
-                class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-              />
+              <input type="file" accept="image/*" @change="uploadCoverImage"
+                class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 dark:border-slate-700 dark:bg-slate-950 dark:text-white" />
 
               <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
                 This image will show on project card and first in details page.
               </p>
 
-              <p
-                v-if="isUploadingCover"
-                class="mt-2 text-sm font-semibold text-blue-600"
-              >
+              <p v-if="isUploadingCover" class="mt-2 text-sm font-semibold text-blue-600">
                 Uploading cover image...
               </p>
             </div>
@@ -347,30 +321,20 @@ onMounted(loadProject)
                 Gallery Images
               </label>
 
-              <input
-                type="file"
-                accept="image/*"
-                @change="uploadGalleryImage"
-                class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-              />
+              <input type="file" accept="image/*" @change="uploadGalleryImage"
+                class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 dark:border-slate-700 dark:bg-slate-950 dark:text-white" />
 
               <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
                 Upload one image at a time. Serial will be maintained.
               </p>
 
-              <p
-                v-if="isUploadingGallery"
-                class="mt-2 text-sm font-semibold text-blue-600"
-              >
+              <p v-if="isUploadingGallery" class="mt-2 text-sm font-semibold text-blue-600">
                 Uploading gallery image...
               </p>
             </div>
           </div>
 
-          <div
-            v-if="previewImages.length"
-            class="rounded-2xl border border-gray-200 p-4 dark:border-slate-800"
-          >
+          <div v-if="previewImages.length" class="rounded-2xl border border-gray-200 p-4 dark:border-slate-800">
             <div class="mb-4 flex items-center justify-between gap-3">
               <div>
                 <h2 class="font-bold text-gray-900 dark:text-white">
@@ -384,48 +348,27 @@ onMounted(loadProject)
               </div>
 
               <div class="flex gap-2">
-                <button
-                  type="button"
-                  @click="goToPreviousImage"
-                  class="rounded-lg bg-gray-100 px-4 py-2 font-semibold text-gray-700 transition hover:bg-gray-200 dark:bg-slate-800 dark:text-white"
-                >
+                <button type="button" @click="goToPreviousImage"
+                  class="rounded-lg bg-gray-100 px-4 py-2 font-semibold text-gray-700 transition hover:bg-gray-200 dark:bg-slate-800 dark:text-white">
                   Previous
                 </button>
 
-                <button
-                  type="button"
-                  @click="goToNextImage"
-                  class="rounded-lg bg-gray-100 px-4 py-2 font-semibold text-gray-700 transition hover:bg-gray-200 dark:bg-slate-800 dark:text-white"
-                >
+                <button type="button" @click="goToNextImage"
+                  class="rounded-lg bg-gray-100 px-4 py-2 font-semibold text-gray-700 transition hover:bg-gray-200 dark:bg-slate-800 dark:text-white">
                   Next
                 </button>
               </div>
             </div>
 
-            <img
-              v-if="activePreviewImage"
-              :src="activePreviewImage.url"
-              :alt="activePreviewImage.label"
-              class="mb-4 h-80 w-full rounded-2xl object-cover"
-            />
+            <img v-if="activePreviewImage" :src="activePreviewImage.url" :alt="activePreviewImage.label"
+              class="mb-4 h-80 w-full rounded-2xl object-cover" />
 
             <div class="grid gap-3 md:grid-cols-4">
-              <div
-                v-for="(image, index) in previewImages"
-                :key="image.url"
+              <div v-for="(image, index) in previewImages" :key="image.url"
                 class="rounded-xl border p-2 dark:border-slate-800"
-                :class="index === activeImageIndex ? 'border-blue-600' : 'border-gray-200'"
-              >
-                <button
-                  type="button"
-                  @click="activeImageIndex = index"
-                  class="block w-full"
-                >
-                  <img
-                    :src="image.url"
-                    :alt="image.label"
-                    class="mb-2 h-24 w-full rounded-lg object-cover"
-                  />
+                :class="index === activeImageIndex ? 'border-blue-600' : 'border-gray-200'">
+                <button type="button" @click="activeImageIndex = index" class="block w-full">
+                  <img :src="image.url" :alt="image.label" class="mb-2 h-24 w-full rounded-lg object-cover" />
 
                   <p class="text-sm font-semibold text-gray-900 dark:text-white">
                     {{ image.label }}
@@ -433,37 +376,24 @@ onMounted(loadProject)
                 </button>
 
                 <div class="mt-2 flex flex-wrap gap-2">
-                  <button
-                    v-if="image.type === 'cover'"
-                    type="button"
-                    @click="removeCoverImage"
-                    class="rounded-md bg-red-600 px-2 py-1 text-xs font-semibold text-white"
-                  >
+                  <button v-if="image.type === 'cover'" type="button" @click="removeCoverImage"
+                    class="rounded-md bg-red-600 px-2 py-1 text-xs font-semibold text-white">
                     Remove
                   </button>
 
                   <template v-else>
-                    <button
-                      type="button"
-                      @click="moveGalleryImage(image.galleryIndex, -1)"
-                      class="rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold text-gray-700 dark:bg-slate-700 dark:text-white"
-                    >
+                    <button type="button" @click="moveGalleryImage(image.galleryIndex, -1)"
+                      class="rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold text-gray-700 dark:bg-slate-700 dark:text-white">
                       Up
                     </button>
 
-                    <button
-                      type="button"
-                      @click="moveGalleryImage(image.galleryIndex, 1)"
-                      class="rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold text-gray-700 dark:bg-slate-700 dark:text-white"
-                    >
+                    <button type="button" @click="moveGalleryImage(image.galleryIndex, 1)"
+                      class="rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold text-gray-700 dark:bg-slate-700 dark:text-white">
                       Down
                     </button>
 
-                    <button
-                      type="button"
-                      @click="removeGalleryImage(image.galleryIndex)"
-                      class="rounded-md bg-red-600 px-2 py-1 text-xs font-semibold text-white"
-                    >
+                    <button type="button" @click="removeGalleryImage(image.galleryIndex)"
+                      class="rounded-md bg-red-600 px-2 py-1 text-xs font-semibold text-white">
                       Remove
                     </button>
                   </template>
@@ -477,11 +407,8 @@ onMounted(loadProject)
               Cover Image URL
             </label>
 
-            <input
-              v-model="form.imageUrl"
-              type="url"
-              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-            />
+            <input v-model="form.imageUrl" type="url"
+              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white" />
           </div>
 
           <div>
@@ -489,11 +416,8 @@ onMounted(loadProject)
               Live URL
             </label>
 
-            <input
-              v-model="form.liveUrl"
-              type="url"
-              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-            />
+            <input v-model="form.liveUrl" type="url"
+              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white" />
           </div>
 
           <div>
@@ -501,11 +425,8 @@ onMounted(loadProject)
               GitHub URL
             </label>
 
-            <input
-              v-model="form.githubUrl"
-              type="url"
-              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-            />
+            <input v-model="form.githubUrl" type="url"
+              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white" />
           </div>
 
           <div>
@@ -513,12 +434,8 @@ onMounted(loadProject)
               Tech Stack
             </label>
 
-            <input
-              v-model="form.techStack"
-              type="text"
-              placeholder="Vue, Tailwind CSS, ASP.NET Core"
-              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
-            />
+            <input v-model="form.techStack" type="text" placeholder="Vue, Tailwind CSS, ASP.NET Core"
+              class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-white" />
 
             <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
               Separate each technology with a comma.
@@ -526,20 +443,13 @@ onMounted(loadProject)
           </div>
 
           <label class="flex items-center gap-3 font-semibold text-gray-900 dark:text-white">
-            <input
-              v-model="form.isFeatured"
-              type="checkbox"
-              class="h-5 w-5 rounded border-gray-300 text-blue-600"
-            />
+            <input v-model="form.isFeatured" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-blue-600" />
 
             Show this project in Featured Projects
           </label>
 
-          <button
-            type="submit"
-            :disabled="isSaving || isUploadingCover || isUploadingGallery"
-            class="rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
-          >
+          <button type="submit" :disabled="isSaving || isUploadingCover || isUploadingGallery"
+            class="rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60">
             {{ isSaving ? 'Saving...' : isEditMode ? 'Update Project' : 'Create Project' }}
           </button>
         </div>
