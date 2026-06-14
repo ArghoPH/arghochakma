@@ -41,7 +41,7 @@
                     &copy; {{ currentYear }} A. All rights reserved.
                 </p>
                 <p class="text-xs">
-                    Designed & Developed by Argho Chakma. Built with Vue.js and Tailwind CSS.
+                    Designed & Developed by Argho Chakma. Built with ASP.NET Core & Vue.
                 </p>
             </div>
         </div>
