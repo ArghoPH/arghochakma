@@ -8,6 +8,8 @@ public class CreateProjectRequest
 
     public string? ImageUrl { get; set; }
 
+    public List<string> GalleryImageUrls { get; set; } = new();
+
     public string? LiveUrl { get; set; }
 
     public string? GithubUrl { get; set; }

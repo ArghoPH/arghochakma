@@ -10,68 +10,36 @@ const TECH_NAME_MAP = {
   vue: 'Vue',
   vuejs: 'Vue',
   vue3: 'Vue',
-  vuex: 'Vuex',
-  pinia: 'Pinia',
-
   vite: 'Vite',
-
   javascript: 'JavaScript',
   js: 'JavaScript',
-
   typescript: 'TypeScript',
   ts: 'TypeScript',
-
   tailwind: 'Tailwind CSS',
   tailwindcss: 'Tailwind CSS',
-
-  css: 'CSS',
-  html: 'HTML',
-
   react: 'React',
   reactjs: 'React',
-
   next: 'Next.js',
   nextjs: 'Next.js',
-
   node: 'Node.js',
   nodejs: 'Node.js',
-
   dotnet: '.NET',
   net: '.NET',
-
-  aspnet: 'ASP.NET',
   aspnetcore: 'ASP.NET Core',
-
   csharp: 'C#',
-  c: 'C',
-
   efcore: 'Entity Framework Core',
-  entityframework: 'Entity Framework',
   entityframeworkcore: 'Entity Framework Core',
-
   postgres: 'PostgreSQL',
   postgresql: 'PostgreSQL',
-
   supabase: 'Supabase',
   docker: 'Docker',
   render: 'Render',
   vercel: 'Vercel',
   cloudinary: 'Cloudinary',
-
+  html: 'HTML',
+  css: 'CSS',
   api: 'API',
-  restapi: 'REST API',
-
-  sql: 'SQL',
-  mysql: 'MySQL',
-  mongodb: 'MongoDB',
-
-  python: 'Python',
-  php: 'PHP',
-  laravel: 'Laravel',
-
-  firebase: 'Firebase',
-  git: 'Git',
-  github: 'GitHub'
+  restapi: 'REST API'
 }
 
 function getToken() {
@@ -146,6 +114,36 @@ export function normalizeTechStack(techStack) {
   return unique
 }
 
+function normalizeImageUrls(imageUrls) {
+  if (!Array.isArray(imageUrls)) {
+    return []
+  }
+
+  const unique = []
+
+  for (const url of imageUrls) {
+    if (!url || typeof url !== 'string') {
+      continue
+    }
+
+    const cleanUrl = url.trim()
+
+    if (!cleanUrl) {
+      continue
+    }
+
+    const exists = unique.some(
+      (item) => item.toLowerCase() === cleanUrl.toLowerCase()
+    )
+
+    if (!exists) {
+      unique.push(cleanUrl)
+    }
+  }
+
+  return unique
+}
+
 function normalizeProject(project) {
   if (!project) {
     return project
@@ -153,14 +151,16 @@ function normalizeProject(project) {
 
   return {
     ...project,
-    techStack: normalizeTechStack(project.techStack)
+    techStack: normalizeTechStack(project.techStack),
+    galleryImageUrls: normalizeImageUrls(project.galleryImageUrls)
   }
 }
 
 function normalizeProjectPayload(project) {
   return {
     ...project,
-    techStack: normalizeTechStack(project.techStack)
+    techStack: normalizeTechStack(project.techStack),
+    galleryImageUrls: normalizeImageUrls(project.galleryImageUrls)
   }
 }
 

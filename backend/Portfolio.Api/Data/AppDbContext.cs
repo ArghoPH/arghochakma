@@ -38,6 +38,10 @@ public class AppDbContext : DbContext
             entity.Property(project => project.ImageUrl)
                 .HasMaxLength(500);
 
+            entity.Property(project => project.GalleryImageUrls)
+                .HasColumnType("text[]")
+                .HasDefaultValueSql("ARRAY[]::text[]");
+
             entity.Property(project => project.LiveUrl)
                 .HasMaxLength(500);
 
