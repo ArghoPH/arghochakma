@@ -1,6 +1,6 @@
 ﻿import { authService } from '@/services/authService'
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? 'https://argho-portfolio-api.onrender.com' : 'http://localhost:5000')
 
 async function request(path, options = {}) {
   const token = authService.getToken()
@@ -59,3 +59,4 @@ export const projectService = {
     })
   },
 }
+

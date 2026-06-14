@@ -1,6 +1,6 @@
 ﻿import { authService } from '@/services/authService'
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? 'https://argho-portfolio-api.onrender.com' : 'http://localhost:5000')
 
 export const uploadService = {
   async uploadImage(file) {
@@ -29,3 +29,4 @@ export const uploadService = {
     return response.json()
   },
 }
+
