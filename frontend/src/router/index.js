@@ -9,6 +9,7 @@ import AboutView from '@/views/AboutView.vue'
 import ContactView from '@/views/Contact.vue'
 import AdminLoginView from '@/views/AdminLoginView.vue'
 import AdminProjectsView from '@/views/AdminProjectsView.vue'
+import AdminProjectFormView from '@/views/AdminProjectFormView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,6 +49,22 @@ const router = createRouter({
       path: '/admin/projects',
       name: 'admin-projects',
       component: AdminProjectsView,
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/admin/projects/create',
+      name: 'admin-project-create',
+      component: AdminProjectFormView,
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/admin/projects/edit/:id',
+      name: 'admin-project-edit',
+      component: AdminProjectFormView,
       meta: {
         requiresAuth: true,
       },
