@@ -10,7 +10,7 @@ A full-stack developer portfolio built with Vue 3, Vite, Tailwind CSS, ASP.NET C
 
 The portfolio presents selected projects, project details, live links, GitHub links, gallery images, and a protected admin dashboard for managing portfolio content without editing source code manually.
 
-## Live Demo
+## Live Site
 
 - Portfolio: https://argho-chakma.vercel.app
 - Production API: https://argho-portfolio-api.onrender.com
