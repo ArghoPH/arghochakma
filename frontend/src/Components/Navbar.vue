@@ -12,6 +12,7 @@ function closeMenu() {
     isMenuOpen.value = false
 }
 
+
 onMounted(() => {
     isDark.value = localStorage.getItem('theme') === 'dark'
 
@@ -35,11 +36,10 @@ function toggleTheme() {
 
 <template>
     <header class="sticky top-0 z-50 shadow-sm">
-        <nav
-    class="mx-auto flex max-w items-center justify-between px-5 py-4
+        <nav class="mx-auto flex max-w items-center justify-between px-5 py-4
            bg-white/90 dark:bg-gray-950/90
            backdrop-blur
-           transition-colors duration-300">  
+           transition-colors duration-300">
             <!-- Logo -->
             <RouterLink to="/" class="text-2xl font-bold text-black dark:text-white" @click="closeMenu">
                 Argho
@@ -49,21 +49,14 @@ function toggleTheme() {
             <div class="hidden items-center gap-6 md:flex">
 
                 <!-- Theme Toggle -->
-                <button
-    @click="toggleTheme"
-    class="flex h-10 w-10 items-center justify-center rounded-full
+                <button @click="toggleTheme" class="flex h-10 w-10 items-center justify-center rounded-full
            text-gray-700 dark:text-gray-200
            hover:bg-gray-100 dark:hover:bg-gray-800
-           transition-all duration-300"
->
-    <i
-        :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"
-        class="text-lg"
-    ></i>
-</button>
+           transition-all duration-300">
+                    <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'" class="text-lg"></i>
+                </button>
 
-                <RouterLink to="/"
-                    class="font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
+                <RouterLink to="/" class="font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
                     Home
                 </RouterLink>
 
@@ -110,39 +103,29 @@ function toggleTheme() {
             <div class="flex flex-col gap-4 px-5 py-5">
 
                 <!-- Theme Toggle -->
-                <button
-    @click="toggleTheme"
-    class="flex h-10 w-10 items-center justify-center rounded-full
+                <button @click="toggleTheme" class="flex h-10 w-10 items-center justify-center rounded-full
            text-gray-700 dark:text-gray-200
            hover:bg-gray-100 dark:hover:bg-gray-800
-           transition-all duration-300"
->
-    <i
-        :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"
-        class="text-lg"
-    ></i>
-</button>
+           transition-all duration-300">
+                    <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'" class="text-lg"></i>
+                </button>
 
-                <RouterLink to="/"
-                    class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
+                <RouterLink to="/" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
                     @click="closeMenu">
                     Home
                 </RouterLink>
 
-                <RouterLink to="/projects"
-                    class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
+                <RouterLink to="/projects" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
                     @click="closeMenu">
                     Projects
                 </RouterLink>
 
-                <RouterLink to="/about"
-                    class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
+                <RouterLink to="/about" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
                     @click="closeMenu">
                     About
                 </RouterLink>
 
-                <RouterLink to="/contact"
-                    class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
+                <RouterLink to="/contact" class="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition"
                     @click="closeMenu">
                     Contact
                 </RouterLink>
