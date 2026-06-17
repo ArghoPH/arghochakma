@@ -93,6 +93,27 @@ const skills = [
         name: 'CSS',
         icon: 'fa-brands fa-css3-alt',
     },
+
+    {
+        name: 'Sass',
+        icon: 'fa-brands fa-sass',
+    },
+
+    {
+        name: 'Bootstrap',
+        icon: 'fa-brands fa-bootstrap',
+    },
+
+    {
+        name: 'Tailwind CSS',
+        icon: 'fa-solid fa-wind',
+    },
+
+    {
+        name: 'ASP.NET Core',
+        icon: 'fa-brands fa-dot-net',
+    },
+
     {
         name: 'JavaScript',
         icon: 'fa-brands fa-js',
