@@ -40,9 +40,9 @@ public class UploadsController : ControllerBase
             return BadRequest(new { message = "Only JPG, PNG, WEBP, and GIF images are allowed." });
         }
 
-        var cloudName = _configuration["Cloudinary:CloudName"];
-        var apiKey = _configuration["Cloudinary:ApiKey"];
-        var apiSecret = _configuration["Cloudinary:ApiSecret"];
+        var cloudName = _configuration["Cloudinary:dzds2pfu4"];
+        var apiKey = _configuration["Cloudinary:381764981323834"];
+        var apiSecret = _configuration["Cloudinary:0KEWJVkCv343lo29pIVO0k6gXxM"];
 
         if (
             string.IsNullOrWhiteSpace(cloudName) ||
