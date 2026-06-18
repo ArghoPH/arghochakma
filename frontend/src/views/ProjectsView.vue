@@ -51,49 +51,33 @@ onMounted(async () => {
         </p>
       </div>
 
-      <p
-        v-if="isLoading"
-        class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600 dark:bg-slate-900 dark:text-slate-300"
-      >
-        Loading projects...
+      <p v-if="isLoading"
+        class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600 dark:bg-slate-900 dark:text-slate-300">
+        Syncing projects...
       </p>
 
-      <p
-        v-else-if="errorMessage"
-        class="rounded-xl bg-red-50 px-5 py-8 text-center text-red-600 dark:bg-red-950 dark:text-red-300"
-      >
+      <p v-else-if="errorMessage"
+        class="rounded-xl bg-red-50 px-5 py-8 text-center text-red-600 dark:bg-red-950 dark:text-red-300">
         {{ errorMessage }}
       </p>
 
       <template v-else>
         <div v-if="projects.length" class="mb-10 flex flex-wrap justify-center gap-3">
-          <button
-            v-for="category in categories"
-            :key="category"
-            @click="selectedCategory = category"
-            class="rounded-full border px-5 py-2 font-medium transition"
-            :class="
-              selectedCategory === category
+          <button v-for="category in categories" :key="category" @click="selectedCategory = category"
+            class="rounded-full border px-5 py-2 font-medium transition" :class="selectedCategory === category
                 ? 'border-blue-600 bg-blue-600 text-white'
                 : 'border-gray-300 bg-white text-gray-700 hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-blue-500 dark:hover:text-blue-300'
-            "
-          >
+              ">
             {{ category }}
           </button>
         </div>
 
         <div v-if="filteredProjects.length" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <ProjectCard
-            v-for="project in filteredProjects"
-            :key="project.id"
-            :project="project"
-          />
+          <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="project" />
         </div>
 
-        <p
-          v-else
-          class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600 dark:bg-slate-900 dark:text-slate-300"
-        >
+        <p v-else
+          class="rounded-xl bg-gray-50 px-5 py-8 text-center text-gray-600 dark:bg-slate-900 dark:text-slate-300">
           No projects found.
         </p>
       </template>
