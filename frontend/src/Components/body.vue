@@ -138,6 +138,14 @@ onBeforeUnmount(() => {
                         class="skill absolute bg-gradient-to-r from-orange-600 to-purple-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
                         Web Development
                     </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-rose-600 to-rose-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        API Integration
+                    </div>
+                    <div
+                        class="skill absolute bg-gradient-to-r from-slate-900 to-rose-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        ASP.Net Core
+                    </div>
 
                     <!-- Design / UI/UX -->
                     <div
