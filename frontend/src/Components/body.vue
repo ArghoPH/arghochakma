@@ -169,6 +169,10 @@ onBeforeUnmount(() => {
                         Git
                     </div>
                     <div
+                        class=" skill absolute bg-gradient-to-r from-yellow-500 to-fuchsia-800 text-white px-4 py-2 rounded-full cursor-pointer select-none">
+                        PostgreSQL
+                    </div>
+                    <div
                         class="skill absolute bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
                         Responsive Design
                     </div>
