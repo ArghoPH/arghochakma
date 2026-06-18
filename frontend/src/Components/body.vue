@@ -176,6 +176,7 @@ onBeforeUnmount(() => {
                         class="skill absolute bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full cursor-pointer select-none">
                         Responsive Design
                     </div>
+
                 </div>
             </div>
         </div>
