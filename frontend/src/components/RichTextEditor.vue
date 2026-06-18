@@ -60,17 +60,17 @@ const FontSize = Extension.create({
     return {
       setFontSize:
         fontSize =>
-        ({ chain }) => {
-          return chain().setMark('textStyle', { fontSize }).run()
-        },
+          ({ chain }) => {
+            return chain().setMark('textStyle', { fontSize }).run()
+          },
       unsetFontSize:
         () =>
-        ({ chain }) => {
-          return chain()
-            .setMark('textStyle', { fontSize: null })
-            .removeEmptyTextStyle()
-            .run()
-        }
+          ({ chain }) => {
+            return chain()
+              .setMark('textStyle', { fontSize: null })
+              .removeEmptyTextStyle()
+              .run()
+          }
     }
   }
 })
@@ -206,16 +206,19 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="overflow-hidden rounded-2xl border border-gray-300 bg-white dark:border-slate-700 dark:bg-slate-950">
-    <div
-      v-if="editor"
-      class="flex flex-wrap gap-2 border-b border-gray-200 bg-gray-50 p-3 dark:border-slate-800 dark:bg-slate-900"
-    >
-      <button type="button" @click="editor.chain().focus().toggleBold().run()" class="editor-btn" :class="{ active: editor.isActive('bold') }">B</button>
-      <button type="button" @click="editor.chain().focus().toggleItalic().run()" class="editor-btn italic" :class="{ active: editor.isActive('italic') }">I</button>
-      <button type="button" @click="editor.chain().focus().toggleUnderline().run()" class="editor-btn underline" :class="{ active: editor.isActive('underline') }">U</button>
-      <button type="button" @click="editor.chain().focus().toggleStrike().run()" class="editor-btn" :class="{ active: editor.isActive('strike') }">S</button>
+    <div v-if="editor"
+      class="flex flex-wrap gap-2 border-b border-gray-200 bg-gray-50 p-3 dark:border-slate-800 dark:bg-slate-900">
+      <button type="button" @click="editor.chain().focus().toggleBold().run()" class="editor-btn"
+        :class="{ active: editor.isActive('bold') }">B</button>
+      <button type="button" @click="editor.chain().focus().toggleItalic().run()" class="editor-btn italic"
+        :class="{ active: editor.isActive('italic') }">I</button>
+      <button type="button" @click="editor.chain().focus().toggleUnderline().run()" class="editor-btn underline"
+        :class="{ active: editor.isActive('underline') }">U</button>
+      <button type="button" @click="editor.chain().focus().toggleStrike().run()" class="editor-btn"
+        :class="{ active: editor.isActive('strike') }">S</button>
 
-      <select class="editor-select" @change="event => editor.chain().focus().toggleHeading({ level: Number(event.target.value) }).run()">
+      <select class="editor-select"
+        @change="event => editor.chain().focus().toggleHeading({ level: Number(event.target.value) }).run()">
         <option value="">Paragraph</option>
         <option value="1">Heading 1</option>
         <option value="2">Heading 2</option>
@@ -233,18 +236,15 @@ onBeforeUnmount(() => {
         <option value="36px">36px</option>
       </select>
 
-      <input
-        type="color"
-        value="#2563eb"
-        title="Text color"
-        class="h-9 w-12 rounded border border-gray-300 bg-white p-1 dark:border-slate-700"
-        @input="setTextColor"
-      />
-
+      <input type="color" value="#2563eb" title="Text color"
+        class="h-9 w-12 rounded border border-gray-300 bg-white p-1 dark:border-slate-700" @input="setTextColor" />
       <button type="button" @click="editor.chain().focus().setTextAlign('left').run()" class="editor-btn">Left</button>
-      <button type="button" @click="editor.chain().focus().setTextAlign('center').run()" class="editor-btn">Center</button>
-      <button type="button" @click="editor.chain().focus().setTextAlign('right').run()" class="editor-btn">Right</button>
-      <button type="button" @click="editor.chain().focus().setTextAlign('justify').run()" class="editor-btn">Justify</button>
+      <button type="button" @click="editor.chain().focus().setTextAlign('center').run()"
+        class="editor-btn">Center</button>
+      <button type="button" @click="editor.chain().focus().setTextAlign('right').run()"
+        class="editor-btn">Right</button>
+      <button type="button" @click="editor.chain().focus().setTextAlign('justify').run()"
+        class="editor-btn">Justify</button>
 
       <button type="button" @click="editor.chain().focus().toggleBulletList().run()" class="editor-btn">Bullet</button>
       <button type="button" @click="editor.chain().focus().toggleOrderedList().run()" class="editor-btn">Number</button>
@@ -255,8 +255,10 @@ onBeforeUnmount(() => {
       <button type="button" @click="editor.chain().focus().unsetLink().run()" class="editor-btn">Unlink</button>
       <button type="button" @click="addImage" class="editor-btn">Image URL</button>
 
-      <button type="button" @click="editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()" class="editor-btn">Table</button>
-      <button type="button" @click="editor.chain().focus().addColumnBefore().run()" class="editor-btn">Col Before</button>
+      <button type="button" @click="editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()"
+        class="editor-btn">Table</button>
+      <button type="button" @click="editor.chain().focus().addColumnBefore().run()" class="editor-btn">Col
+        Before</button>
       <button type="button" @click="editor.chain().focus().addColumnAfter().run()" class="editor-btn">Col After</button>
       <button type="button" @click="editor.chain().focus().deleteColumn().run()" class="editor-btn">Del Col</button>
       <button type="button" @click="editor.chain().focus().addRowBefore().run()" class="editor-btn">Row Before</button>
@@ -266,13 +268,11 @@ onBeforeUnmount(() => {
 
       <button type="button" @click="editor.chain().focus().undo().run()" class="editor-btn">Undo</button>
       <button type="button" @click="editor.chain().focus().redo().run()" class="editor-btn">Redo</button>
-      <button type="button" @click="editor.chain().focus().clearNodes().unsetAllMarks().run()" class="editor-btn">Clear</button>
+      <button type="button" @click="editor.chain().focus().clearNodes().unsetAllMarks().run()"
+        class="editor-btn">Clear</button>
     </div>
 
-    <EditorContent
-      :editor="editor"
-      class="min-h-[360px] p-4 text-gray-900 dark:text-white"
-    />
+    <EditorContent :editor="editor" class="min-h-[360px] p-4 text-gray-900 dark:text-white" />
   </div>
 </template>
 
@@ -384,6 +384,7 @@ onBeforeUnmount(() => {
 }
 
 @media (prefers-color-scheme: dark) {
+
   .editor-btn,
   .editor-select {
     border-color: #334155;
@@ -401,6 +402,3 @@ onBeforeUnmount(() => {
   }
 }
 </style>
-
-
-
