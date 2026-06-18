@@ -40,7 +40,7 @@ function handleSubmit() {
                 <div class="space-y-8 text-gray-300 text-lg">
                     <p>Mail: <a href="mailto:arghochakma2023@gmail.com"
                             class="text-indigo-400 hover:underline">arghochakma2023@gmail.com</a></p>
-                    <p><span class="font-semibold text-purple-400">Phone:</span> <a href="tel:01999358618"
+                    <p><span class="font-semibold text-purple-400">Phone:</span> <a href="tel:01537366505"
                             class="text-indigo-400 hover:underline">01537366505</a></p>
                     <p><span class="font-semibold text-cyan-400">Location:</span> Dhaka, Bangladesh</p>
                 </div>
