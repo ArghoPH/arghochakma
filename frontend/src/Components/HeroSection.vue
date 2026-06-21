@@ -47,7 +47,7 @@ import profileImage from '../images/profile-1.png'
                     </div>
 
                     <p class="mt-6 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-400 lg:text-lg">
-                        I bridge the gap design and code, crafting interactive visual
+                        I bridge the gap between design and code, crafting interactive visual
                         systems that are resilient, performant, and delightful to experience.
                         Specialized in
                         <span class="font-semibold text-gray-900 dark:text-white">
