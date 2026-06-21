@@ -236,6 +236,7 @@ onBeforeUnmount(() => {
         <option value="36px">36px</option>
       </select>
 
+
       <input type="color" value="#2563eb" title="Text color"
         class="h-9 w-12 rounded border border-gray-300 bg-white p-1 dark:border-slate-700" @input="setTextColor" />
       <button type="button" @click="editor.chain().focus().setTextAlign('left').run()" class="editor-btn">Left</button>
