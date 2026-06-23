@@ -38,7 +38,7 @@
             <div
                 class="flex flex-col items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-400 md:flex-row">
                 <p>
-                    &copy; {{ currentYear }} A. All rights reserved.
+                    &copy; {{ currentYear }} Argho. All rights reserved.
                 </p>
                 <p class="text-xs">
                     Designed & Developed by Argho Chakma. Built with ASP.NET Core & Vue.
