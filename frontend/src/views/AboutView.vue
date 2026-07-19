@@ -1,4 +1,5 @@
 <template>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <main class="bg-white dark:bg-gray-950">
         <section class="container mx-auto px-4 sm:px-6 py-16 ">
             <!-- Heading -->
@@ -111,7 +112,7 @@ const skills = [
 
     {
         name: 'ASP.NET Core',
-        icon: 'fa-brands fa-dot-net',
+        icon: 'devicon-dotnetcore-plain',
     },
 
     {
