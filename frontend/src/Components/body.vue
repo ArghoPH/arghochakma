@@ -287,8 +287,6 @@ onBeforeUnmount(() => {
             </div>
         </div>
     </section>
-
-
 </template>
 
 <style>
